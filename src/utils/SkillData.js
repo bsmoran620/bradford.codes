@@ -1,6 +1,3 @@
-import Card from "react-bootstrap/Card";
-import React from "react";
-
 /** DONE: Java, C, Python, Objective C, Jena, Play, PG, Mongo
  * NOT INCLUDED: BASH, ETL, Apache POI, word API, AWS Lambda, S3
  * C, Java, Python, Objective C (ios), ML
@@ -24,6 +21,20 @@ import React from "react";
 
 //    TODO: Tool Preferences: macOS, IntelliJ IDEA, Jira (Atlassian), Git (GitHub or Bitbucket), Postman, Virtual Box, Slack
     // TODO: Patterns: Adapter/ServiceLoader, Event Sourcing, Customization vs Personalization … other?
+
+export const getUniqueExperiences = () => {
+  return [
+    `Represented Engineering on the company Leadership Team. Consulting from <a href="https://www.tablegroup.com/">Patrick Lencioni's Table Group</a>`,
+    `Merge Owner of entire code bases (50+ repositories)`,
+    `Created interview processes and interviewed 100's of candidates`,
+    `Designed and documented major pieces of Engineering processes and Software Development Lifecycle`,
+    `Scrum Master (Certified Twice). Designed and rolled out SCRUM process for organization with a focus on continuous improvement`,
+    `Project Management and client facing in many projects`,
+    `Engineering Management experience such as one-on-one meetings and setting OKR's at department and individual level`,
+    `Jira Administration`,
+    `HealthCare Compliant SDLC Audits (preparation and participation)`
+  ]
+};
 
 export const getLanguages = () => {
   return [
@@ -315,16 +326,9 @@ export const getSkills = () => {
 };
 
 export const getProjects = () => {
-    // unique exp: jira admin, scrum master certs,
-    // Scrum master training: Completed two Scrum Master certification courses
-    //         from Scrum Alliance and Daily Agile. Then lead the Scrum process integration of the team and
-    //          how it worked with other processes in the company like performance reviews...etc
-    // todo: skill name and link? Make these tags (badges)
   return [
     {
-      company: 'TODO',
       title: 'Issue Management Rewrite',
-      subtitle: '',
       description: `<p>Rewrite of the core module of Pinnacle 21 Enterprise to move toward a Jira
         like issue management system. Because of the complexity of the new functionality introduced
         we migrated this piece of the UI to React/Redux. The main screen, a complex three 
@@ -335,15 +339,15 @@ export const getProjects = () => {
         redesigned and simplified. This was my first time leading a major production React/Redux project.
         Some of the biggest challenges we faced were CSS (TODO).</p><br/><p>Investigate websockets 
         but end up using local storage for cross tab synchronization</p>`,
-      start: '',
-      end: '',
-      skills: 'Webpack, Node.js, npm, React/Redux, Java, Play Framework, CSS Grid, Flexbox, ' +
-          'SplitJS, AtlasKit, Jest/Enzyme, React Bootstrap, Lodash, Moment, Highcharts, Axios, Babel'
+      timeFrame: '6 months',
+      outCome: 'Still in development.',
+      skills: ['React/Redux', 'JavaScript', 'Java', 'Play Framework', 'CircleCI', 'CSS Grid', 'Flexbox', 'SplitJS',
+          'AtlasKit', 'React Bootstrap', 'Lodash', 'Highcharts', 'Axios', 'Node.js', 'npm', 'Webpack', 'Babel',
+          'Apache POI', 'Jest/Enzyme', 'AWS Cognito', 'Git']
     },
     {
-      company: 'TODO',
       title: 'Community Rewrite',
-      subtitle: 'Open Source Desktop Application to Electron with React',
+      subtitle: 'Open Source Desktop Application converted to Electron with React',
       description: `<p>Rewrite open source desktop app into Electron and React. I mostly oversaw
           this project, but had to jump in due to time constraints. My major
           contributions include setting up multiple CircleCI builds with cascading
@@ -352,64 +356,61 @@ export const getProjects = () => {
           href="https://www.electron.build"> Electron Builder</a>library which enabled
           us to auto-update our clients installations. We also heavily leveraged AWS
           services for this project including S3, Lambda, and Cognito.</p>`,
-      start: '',
-      end: '',
-      skills: 'TODO'
+      timeFrame: '6 months',
+      outCome: 'Still in production, with patches and enhancements.',
+      skills: ['Electron', 'Node.js', 'React/Redux', 'Java', 'JavaScript', 'CircleCI', 'Apache POI', 'RxJava', 'AWS Services (S3, Lambda)', 'AWS Cognito', 'Git']
     },
     {
-      company: 'TODO',
       title: 'Self Service Data Fitness',
       subtitle: 'Dynamic UI built by json config file',
-      description: `TODO: See architecture write up (personalization vs customization)<p>: Led 
-        the core project of 2018 to build an enhanced reporting suite to improve usability of 
+      description: `Led the core project of 2018 to build an enhanced reporting suite to improve usability of 
         the system for FDA reviewers. This required a well-organized back end mostly from 
         scratch that takes a personalized internal configuration file and dynamically generates 
-        a suite of reports. We also re-organized the feel of our UI during this project. 
-        The structural design of this project will be used re-used in upcoming projects.</p>`,
-      start: '',
-      end: '',
-      skills: 'TODO'
-    },   // Reviewers Guide in word prototype? // Under the Hills site?
+        a suite of reports. We created a custom JSON schema with a parser that would translate each of the 
+        JSON objects into executable classes using Java Reflection. The core of this project was choosing 
+        a pattern of Personalization instead of Customization. In this way, our subject matter experts 
+        created a personalized user experience including filtered results and localized text language based on the user.</p>`,
+      timeFrame: '6 months',
+      outCome: 'Still in production, planned major enhancements.',
+      skills: ['Play Framework', 'Java', 'JavaScript', 'Apache POI', 'React/Redux', 'PostgreSQL', 'JUNIT', 'Jest', 'Domain Knowledge', 'Git']
+    },
     {
-      company: 'TODO',
       title: 'Define.xml Tool',
-      subtitle: '',
+      subtitle: 'Second successful core module of the paid product',
       description: `<p>Define.xml Tool: Inherited the leadership of this massive project and 
         was responsible for core features such as metadata extraction, merging, and history.
         As the team lead I was in charge of meeting timelines and filling in gaps across the 
-        module as needed.</p>`,
-      start: '',
-      end: '',
-      skills: 'TODO'
+        module as needed. Built an excel like editor using <a href="https://handsontable.com">Handsontable</a>.</p>`,
+        timeFrame: '1 year',
+        outCome: 'Actively maintained and updated with new features.',
+        skills: ['Play Framework', 'Java', 'JavaScript', 'Apache POI', 'Jenkins', 'JUNIT', 'Jasmine', 'PostgreSQL', 'Domain Knowledge', 'Git']
     },
     {
-      company: 'TODO',
-      title: 'Time Zone Feature',
-      subtitle: '',
+      title: 'Time Zones',
       description: `<p>Time Zone: Small feature added to allow users to set and adjust their time zone 
         that impacted the reporting of dates and times across the system.</p>`,
-      start: '',
-      end: '',
-      skills: 'TODO'
+      timeFrame: '1 month (part time)',
+      outCome: 'Still active. In retrospect, would discourage server side timezone formatting in favor of client side',
+      skills: ['Play Framework', 'Java', 'JavaScript', 'Git']
     },
     {
-      company: 'TODO',
       title: 'License Agreement',
-      subtitle: '',
       description: `<p>License Agreement: Custom feature that required a wide understanding of our 
-        existing system.</p>`,
-      start: '',
-      end: '',
-      skills: 'TODO'
+        existing system's use of the Play Framework. Integrated into our authentication services to 
+        detect users who haven't agreed to licensing based on email domain.</p>`,
+      timeFrame: '3 months (part time)',
+      outCome: 'Only used by a couple clients, still active',
+      skills: ['Play Framework', 'Java', 'JUNIT', 'Git']
     },
     {
       title: 'Custom Adapters',
       description: `<p>Custom Adapters: Organized and built custom adapters for several clients 
         to help integrate their internal processes with Pinnacle 21 Enterprise. This required a deep dive 
-        into understanding the metadata management process and associated standards.</p>`,
+        into understanding the metadata management process and associated standards. I also had to work 
+        extensively with the Java Service Loader pattern.</p>`,
       timeFrame: '6 months (part time)',
       outCome: 'Still open for public review here: https://www.phusewiki.org/wiki/index.php?title=Data_Reviewer%27s_Guide_in_XML',
-      skills: ['Domain Knowledge', 'XML', 'XSD']
+      skills: ['Domain Knowledge', 'XML', 'XSD', 'Git', 'Service Loader']
     },
     {
       title: 'Reviewer’s Guide in XML Project',
@@ -452,7 +453,7 @@ export const getProjects = () => {
           'leading an idea through to a successful product.',
       timeFrame: '6 months',
       outCome: 'Still in Production over 5 years with minor maintenance. Considered for tool enhancements.',
-      skills: ['Java', 'JavaScript', 'SQL', 'jQuery', 'Play Framework', 'PostgreSQL', 'MongoDB', "JUNIT", 'Apache POI', 'Microsoft Word', 'XML']
+      skills: ['Java', 'JavaScript', 'SQL', 'jQuery', 'Play Framework', 'PostgreSQL', 'MongoDB', "JUNIT", 'Apache POI', 'Microsoft Word', 'XML', 'Git']
     },
     {
       title: 'Core Enterprise Product',
@@ -467,7 +468,7 @@ export const getProjects = () => {
           'quickly without considering the implications on maintenance years in the future.',
       timeFrame: '1.5 years (part-time, across several releases)',
       outCome: 'Still in Production over 5 years. Rewrote front end in react in 2019/2020.',
-      skills: ['Java', 'JavaScript', 'SQL', 'jQuery', 'Play Framework', 'PostgreSQL', 'MongoDB', "JUNIT", 'Apache POI']
+      skills: ['Java', 'JavaScript', 'SQL', 'jQuery', 'Play Framework', 'PostgreSQL', 'MongoDB', "JUNIT", 'Apache POI', 'Git']
     },
     {
       title: 'Analytics',
@@ -486,7 +487,7 @@ export const getProjects = () => {
           'Play Framework as this was my first major production Java library',
       timeFrame: '1 year to production (On going expansion)',
       outCome: 'Project discontinued as the technology was too young and it wasn\'t right for our use case',
-      skills: ['Java', 'Play Framework', 'JUNIT', 'MongoDB', 'PostgreSQL', 'OOP']
+      skills: ['Java', 'Play Framework', 'JUNIT', 'MongoDB', 'PostgreSQL', 'OOP', 'Git']
     },
     {
       title: 'Semantic Web Research',
@@ -494,7 +495,132 @@ export const getProjects = () => {
         technologies to model Clinical Data Standards. Specifically investigated the Apache Jena API.</p>`,
       timeFrame: '6 months (part-time)',
       outCome: 'Still in Production over 6 years with minor maintenance and new reports added every year.',
-      skills: ['Apache Jena', 'TDB', 'SPARQL', 'Semantic Web']
+      skills: ['Apache Jena (Semantic Web)', 'TDB', 'SPARQL', 'Semantic Web']
     }
   ];
+};
+
+export const getOtherSkills = () => {
+  return [
+    {
+      id: 'TDB',
+      color: '#141e65'
+    },
+    {
+      id: 'SPARQL',
+      color: '#fa74fc'
+    },
+    {
+      id: 'Semantic Web',
+      color: '#f8ee3a'
+    },
+    {
+      id: 'OOP',
+      color: '#bfb3e5'
+    },
+    {
+      id: 'Google Analytics',
+      color: '#703d74'
+    },
+    {
+      id: 'Apache POI',
+      color: '#e38740'
+    },
+    {
+      id: 'jQuery',
+      color: '#ace0f9'
+    },
+    {
+      id: 'XML',
+      color: '#ec20b4'
+    },
+    {
+      id: 'Microsoft Word',
+      color: '#26a3ac'
+    },
+    {
+      id: 'ETL',
+      color: '#7b41ef'
+    },
+    {
+      id: 'Bash',
+      color: '#c3f3c5'
+    },
+    {
+      id: 'XSD',
+      color: '#7f031d'
+    },
+    {
+      id: 'Domain Knowledge',
+      color: '#2b8a26'
+    },
+    {
+      id: 'Service Loader',
+      color: '#796780'
+    },
+    {
+      id: 'Node.js',
+      color: '#82b42b'
+    },
+    {
+      id: 'RxJava',
+      color: '#607057'
+    },
+    {
+      id: 'AWS Cognito',
+      color: '#1831fe'
+    },
+    {
+      id: 'CSS Grid',
+      color: '#4e9789'
+    },
+    {
+      id: 'Flexbox',
+      color: '#c23d8b'
+    },
+    {
+      id: 'SplitJS',
+      color: '#dd140b'
+    },
+    {
+      id: 'AtlasKit',
+      color: '#ffaabb'
+    },
+    {
+      id: 'React Bootstrap',
+      color: '#b45aff'
+    },
+    {
+      id: 'Lodash',
+      color: '#707b94'
+    },
+    {
+      id: 'Highcharts',
+      color: '#97e11b'
+    },
+    {
+      id: 'Axios',
+      color: '#381ea6'
+    },
+    {
+      id: 'npm',
+      color: '#16b5ad'
+    },
+    {
+      id: 'Webpack',
+      color: '#fea689'
+    },
+    {
+      id: 'AtlasKit',
+      color: '#07138c'
+    },
+    {
+      id: 'Babel',
+      color: '#813d98'
+    },
+    {
+      id: 'Jest/Enzyme',
+      color: '#ddbaf9'
+    }
+  ]
 };

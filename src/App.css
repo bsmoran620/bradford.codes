@@ -1,24 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  margin-top: 25px;
 }
 
 .skillButtons {
@@ -28,4 +10,35 @@
 .skillButtons .btn {
   margin-left: 5px;
   margin-bottom: 10px;
+}
+
+.resume-header {
+  padding-left: 25px;
+}
+
+.resume h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.resume .skill-graph {
+  text-align: center;
+}
+
+.resume .jumbotron {
+  padding-left: 25px;
+  margin-top: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.project-item {
+    margin: 20px;
+}
+
+.badge {
+  margin: 1px 2px 1px 2px;
 }
