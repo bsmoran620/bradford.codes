@@ -25,6 +25,12 @@
   text-align: center;
 }
 
+.resume .skill-graph .skill-graph-svg {
+    display: block;
+    height: 500px;
+    width: 95vw;
+}
+
 .resume .jumbotron {
   padding-left: 25px;
   margin-top: 20px;
@@ -33,6 +39,13 @@
 .project-container {
     display: grid;
     grid-template-columns: auto auto;
+}
+
+/* resize for phones */
+@media (max-width: 700px)  {
+    .project-container {
+        grid-template-columns: auto;
+    }
 }
 
 .project-item {

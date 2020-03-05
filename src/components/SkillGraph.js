@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Line } from '@nivo/line';
+import { ResponsiveLine } from '@nivo/line';
 import Button from 'react-bootstrap/Button';
 
 // TODO: Main languages as different line type? (dashed line? see https://nivo.rocks/storybook/?path=/story/line--custom-line-style)
@@ -63,38 +63,38 @@ export function SkillGraph(props) {
 
     return (
         <div className="skill-graph">
-            <Line
-                width={900}
-                height={400}
-                margin={{ top: 20, right: 20, bottom: 60, left: 80 }}
-                animate={true}
-                enableSlices="x"
-                data={getSkills()}
-                yScale={{
-                    type: 'linear',
-                    stacked: false,
-                    min: 0,
-                    max: 5
-                }}
-                // TODO: Don't move axis when skills like python are selected
-                // TODO: PR to nivo to fix time min and max? values.min => just min?
-                // min and max waiting on bug fix: https://github.com/plouc/nivo/issues/675
-                xScale={{
-                    type: 'time',
-                    format: '%Y-%m',
-                    precision: 'month'
-                }}
-                xFormat="time:%Y-%m"
-                axisBottom={{
-                    format: '%b %Y',
-                    tickValues: 'every 6 months'
-                }}
-                curve="monotoneX"
-                pointSize={8}
-                pointBorderColor="#fff"
-                pointBorderWidth={2}
-                colors={{ datum: 'color' }}
-            />
+            <div className="skill-graph-svg">
+                <ResponsiveLine
+                    margin={{ top: 20, right: 20, bottom: 60, left: 80 }}
+                    animate={true}
+                    enableSlices="x"
+                    data={getSkills()}
+                    yScale={{
+                        type: 'linear',
+                        stacked: false,
+                        min: 0,
+                        max: 5
+                    }}
+                    // TODO: Don't move axis when skills like python are selected
+                    // TODO: PR to nivo to fix time min and max? values.min => just min?
+                    // min and max waiting on bug fix: https://github.com/plouc/nivo/issues/675
+                    xScale={{
+                        type: 'time',
+                        format: '%Y-%m',
+                        precision: 'month'
+                    }}
+                    xFormat="time:%Y-%m"
+                    axisBottom={{
+                        format: '%b %Y',
+                        tickValues: 'every 6 months'
+                    }}
+                    curve="monotoneX"
+                    pointSize={8}
+                    pointBorderColor="#fff"
+                    pointBorderWidth={2}
+                    colors={{ datum: 'color' }}
+                />
+            </div>
             <div className="skillButtons">
                 {props.data.map((skill, index) => skillButtonComponent(skill, index))}
             </div>
