@@ -85,8 +85,8 @@ export function SkillGraph(props) {
                     }}
                     xFormat="time:%Y-%m"
                     axisBottom={{
-                        format: '%b %Y',
-                        tickValues: 'every 6 months'
+                        format: '%Y',
+                        tickValues: 'every 1 year'
                     }}
                     curve="monotoneX"
                     pointSize={8}

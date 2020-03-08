@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Resume } from './components';
+import { Resume, Footer } from './components';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       </header>
       <body>
         <Resume />
+        <Footer />
       </body>
     </div>
   );
