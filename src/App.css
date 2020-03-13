@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+/* ------------- RESUME ------------- */
+.resume {
   margin-top: 25px;
 }
 
@@ -14,6 +14,10 @@
 
 .resume-header {
   padding-left: 25px;
+}
+
+.resume-header > * {
+  padding: 10px;
 }
 
 .resume h2 {
@@ -56,13 +60,15 @@
 .badge {
   margin: 1px 2px 1px 2px;
 }
-
+.skill-scale-list {
+  margin-top: 15px;
+}
 
 /* ------------- FOOTER ------------- */
 .footer {
     position: absolute;
     width: 100%;
-    background-color: #2f2f2f;
+    background-color: #343a40;
     padding: 15px;
     display: grid;
     grid-template-columns: auto auto;
@@ -76,4 +82,11 @@
     float: right;
     padding-left: 10px;
     padding-right: 25px;
+}
+
+/* ------------- TEMPORARY ------------- */
+.todo {
+  margin-top: 30px;
+  text-align: center;
+  height: 87vh;
 }

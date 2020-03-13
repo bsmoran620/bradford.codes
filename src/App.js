@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
-import { Resume, Footer } from './components';
+import { Navigation, Resume, Footer, TODO } from './components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <body>
-        <Resume />
-        <Footer />
-      </body>
-    </div>
+      <Fragment>
+          <Router>
+            <Navigation />
+            <Switch>
+              <Route path="/resume">
+                <Resume />
+              </Route>
+              <Route path="/projects">
+                <TODO />
+              </Route>
+              <Route path="/">
+                <Resume />
+              </Route>
+            </Switch>
+            <Footer />
+          </Router>
+      </Fragment>
   );
 }
-
-export default App;
