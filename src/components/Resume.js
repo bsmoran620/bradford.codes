@@ -40,6 +40,7 @@ export function Resume() {
                     <li><b>4</b> represents a high degree of mastery or less frequent use</li>
                     <li><b>5</b> represents the highest degree of mastery with very frequent use</li>
                 </ul>
+                <h5>Try filtering skills and projects using the buttons below the charts...</h5>
             </Popover.Content>
         </Popover>
     );
