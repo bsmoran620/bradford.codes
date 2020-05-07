@@ -12,7 +12,7 @@ import { ReactComponent as USAMap } from './../resources/usaMap.svg';
  * Mobile...
  */
 export function MyTravel() {
-  const [isWorldMap, setIsWorldMap] = useState(false);
+  const [isWorldMap, setIsWorldMap] = useState(true);
   const [travelDetail, setTravelDetail] = useState(null);
   
   return (
