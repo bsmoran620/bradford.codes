@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './App.css';
-import { Navigation, Resume, Footer, TODO } from './components';
+import { Navigation, Resume, Footer, MyTravel, TODO } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function App() {
@@ -11,6 +11,9 @@ export default function App() {
             <Switch>
               <Route path="/resume">
                 <Resume />
+              </Route>
+              <Route path="/projects/my-travel">
+                <MyTravel />
               </Route>
               <Route path="/projects">
                 <TODO />

@@ -64,6 +64,25 @@
   margin-top: 15px;
 }
 
+/* ------------- MyTravel ------------- */
+.my-travel {
+  margin-top: 30px;
+  text-align: center;
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.my-travel-map {
+  height: 75vh;
+  width: 100vw;
+  cursor: pointer;
+}
+
+.my-travel-details {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* ------------- FOOTER ------------- */
 .footer {
     position: absolute;

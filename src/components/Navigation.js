@@ -10,7 +10,7 @@ export function Navigation() {
           <Nav className="mr-auto">
             <Nav.Link href="/resume">Resume</Nav.Link>
             <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/projects/1">Project 1</NavDropdown.Item>
+              <NavDropdown.Item href="/projects/my-travel">MyTravel</NavDropdown.Item>
               <NavDropdown.Item href="/projects/2">Project 2</NavDropdown.Item>
             </NavDropdown>
           </Nav>
