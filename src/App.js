@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './App.css';
-import { Navigation, Resume, Footer, MyTravel, TODO } from './components';
+import { Navigation, Resume, Footer, MyTravel, TODO, HomePage } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
                 <TODO />
               </Route>
               <Route path="/">
-                <Resume />
+                <HomePage />
               </Route>
             </Switch>
             <Footer />

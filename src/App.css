@@ -109,3 +109,102 @@
   text-align: center;
   height: 87vh;
 }
+
+
+
+
+
+/**************************/
+/*     HomePage Theme     */
+/**************************/
+.p-large {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+  color: #ffffff; 
+	font: 400 1rem/1.625rem "Open Sans", sans-serif;
+}
+
+.h1-large {
+  color: lightgray;
+  font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+	letter-spacing: -0.2px;
+}
+
+/* ------------- Header ------------- */
+.header {
+	position: relative;
+	padding-top: 6.5rem;
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/header-background.jpg') center center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.header .text-container {
+	margin-bottom: 4rem;
+}
+
+.header .p-large {
+	margin-bottom: 2.125rem;
+}
+
+.header .image-container {
+	max-width: 420px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* ------------- Media Queries ------------- */
+/* Min-width 768px */
+@media (min-width: 768px) {
+
+}
+/* end of min-width 768px */
+
+
+/* Min-width 992px */
+@media (min-width: 992px) {
+	
+	/* General Styles */
+	.h1-large {
+		font-size: 5rem;
+		line-height: 5.75rem;
+	}
+	/* end of general styles */
+
+	/* Header */
+	.header {
+		padding-top: 11rem;
+	}
+	/* end of header */
+}
+/* end of min-width 992px */
+
+
+/* Min-width 1200px */
+@media (min-width: 1200px) {
+
+	/* Header */
+	.header {
+		padding-top: 13.5rem;
+		padding-bottom: 13.5rem;
+		text-align: left;
+	}
+
+	.header .text-container {
+		margin-bottom: 0;
+	}
+
+	.header .image-container {
+		position: absolute;
+		z-index: 1;
+		right: 47%;
+		bottom: 0;
+		width: 680px;
+		max-width: 100%;
+	}
+	/* end of header */
+}
+/* end of min-width 1200px */
+/* End of Home Page Theme */

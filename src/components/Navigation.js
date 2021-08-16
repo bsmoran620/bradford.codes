@@ -11,7 +11,7 @@ export function Navigation() {
             <Nav.Link href="/resume">Resume</Nav.Link>
             <NavDropdown title="Projects" id="basic-nav-dropdown">
               <NavDropdown.Item href="/projects/my-travel">MyTravel</NavDropdown.Item>
-              <NavDropdown.Item href="/projects/2">Project 2</NavDropdown.Item>
+              <NavDropdown.Item href="/projects/2">Trip Planner</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

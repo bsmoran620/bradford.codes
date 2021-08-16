@@ -22,7 +22,7 @@
 In this example, Kansas, Montana and Pennsylvania are colored blue, and California and Tennessee are colored red.
 Place this code in the empty space below. */
 
-#PA, #FL, #NY, #TN, #CA, #AZ, #NV, #IL, #GA, #LA {
+#PA, #DE, #FL, #NY, #NJ, #TN, #CA, #AZ, #NV, #IL, #GA, #LA, #NH, #VT, #MD {
   fill:#a2fb88;
 }
 
@@ -248,6 +248,8 @@ Place this code in the empty space below. */
 <g class="PA">
   <circle id="philadelphia_pa" class="cityxx" r="6" cy="210.000" cx="880.000" data-city-name="Philadelphia PA" />
   <line x1="880.000" y1="215.000" x2="880.000" y2="230.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="baltimore_md" class="cityxx" r="6" cy="230.000" cx="860.000" data-city-name="Baltimore MD" />
+  <line x1="860.000" y1="235.000" x2="860.000" y2="250.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="statecollege_pa" class="cityxx" r="6" cy="200.000" cx="840.000" data-city-name="State College PA" />
   <line x1="840.000" y1="205.000" x2="840.000" y2="220.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="fallingwater_pa nemacolin_pa pittsburgh_pa" class="cityxx" r="6" cy="220.000" cx="800.000" data-city-name="Pittsburgh PA" />
@@ -256,14 +258,20 @@ Place this code in the empty space below. */
   <line x1="910.000" y1="215.000" x2="900.000" y2="230.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="nyc_ny" class="cityxx" r="6" cy="190.000" cx="900.000" data-city-name="New York City NY" />
   <line x1="900.000" y1="195.000" x2="900.000" y2="210.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="longisland_nj" class="cityxx" r="6" cy="200.000" cx="945.000" data-city-name="Long Island NY" />
+  <line x1="940.000" y1="200.000" x2="920.000" y2="200.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="orlando_fl" class="cityxx" r="6" cy="500.000" cx="812.000" data-city-name="Orlando FL" />
   <line x1="815.000" y1="505.000" x2="825.000" y2="520.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="keywest_fl" class="cityxx b-only" r="6" cy="577.000" cx="812.000" data-city-name="Key West FL" />
   <line x1="815.000" y1="582.000" x2="825.000" y2="597.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="staugustine_fl jupiter_fl" class="cityxx" r="6" cy="460.000" cx="828.000" data-city-name="St. Augustine FL" />
   <line x1="825.000" y1="465.000" x2="815.000" y2="480.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="fortlauderdale_fl" class="cityxx" r="6" cy="530.000" cx="863.000" data-city-name="Fort Lauderdale FL" />
+  <line x1="860.000" y1="535.000" x2="850.000" y2="550.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="atlanta_ga helen_ga" class="cityxx" r="6" cy="380.000" cx="750.000" data-city-name="Atlanta GA" />
   <line x1="750.000" y1="385.000" x2="750.000" y2="400.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="savannah_ga" class="cityxx" r="6" cy="415.000" cx="802.000" data-city-name="Savannah GA" />
+  <line x1="805.000" y1="420.000" x2="815.000" y2="435.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="neworleans_la batonrouge_la whitecastle_la" class="cityxx" r="6" cy="475.000" cx="640.000" data-city-name="New Orleans LA" />
   <line x1="640.000" y1="480.000" x2="640.000" y2="495.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="chicago_il" class="cityxx" r="6" cy="200.000" cx="665.000" data-city-name="Chicago IL" />
@@ -278,6 +286,14 @@ Place this code in the empty space below. */
   <line x1="220.000" y1="375.000" x2="220.000" y2="390.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="sanfrancisco_ca napa_ca sonoma_ca" class="cityxx" r="6" cy="235.000" cx="50.000" data-city-name="San Francisco, Napa, Sonoma CA" />
   <line x1="50.000" y1="240.000" x2="50.000" y2="255.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="laketahoe_ca" class="cityxx" r="6" cy="220.000" cx="100.000" data-city-name="Lake Tahoe CA" />
+  <line x1="100.000" y1="225.000" x2="100.000" y2="240.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="burlington_vt" class="cityxx" r="6" cy="105.000" cx="900.000" data-city-name="Burlington VT" />
+  <line x1="900.000" y1="110.000" x2="900.000" y2="125.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="lanconia_nh" class="cityxx" r="6" cy="115.000" cx="925.000" data-city-name="Lanconia NH" />
+  <line x1="925.000" y1="120.000" x2="925.000" y2="135.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="thousandislands_ny clayton_ny alexandriabay_ny" class="cityxx" r="6" cy="115.000" cx="850.000" data-city-name="Thousand Islands, Clayton, Alexandria Bay NY" />
+  <line x1="850.000" y1="120.000" x2="850.000" y2="135.000" style="stroke:rgb(0,0,0);stroke-width:2" />
 </g>
 <circle class="state borders DCcircle" id="DC" cx="858.5" cy="257.9" r="5">
   <title>District of Columbia</title>

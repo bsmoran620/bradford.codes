@@ -24,15 +24,17 @@
 
 export const getUniqueExperiences = () => {
   return [
-    `Represented Engineering on the company Leadership Team. Consulting from <a href="https://www.tablegroup.com/">Patrick Lencioni's Table Group</a>`,
+    `Experienced a startup grow from the beginning to acquisition at $310 Million`,
+    `First developer to join PowerPay full time (sole-developer for awhile).`,
+    `Represented the Pinnacle21 Engineering on the company Leadership Team. Consulting from <a href="https://www.tablegroup.com/">Patrick Lencioni's Table Group</a>`,
     `Merge Owner of entire code bases (50+ repositories)`,
     `Created interview processes and interviewed 100's of candidates`,
     `Designed and documented major pieces of Engineering processes and Software Development Lifecycle`,
     `Scrum Master (Certified Twice). Designed and rolled out SCRUM process for organization with a focus on continuous improvement`,
     `Project Management and client facing in many projects`,
     `Engineering Management experience such as one-on-one meetings and setting OKR's at department and individual level`,
-    `Jira Administration`,
-    `HealthCare Compliant SDLC Audits (preparation and participation)`
+    `GitHub, AWS, CircleCI, and Jira Administration`,
+    `HealthCare and FinTech Compliant SDLC Audits (preparation and participation)`
   ]
 };
 
@@ -55,7 +57,10 @@ export const getLanguages = () => {
         { x: '2018-06', y: 5 },
         { x: '2019-01', y: 4.5 },
         { x: '2019-06', y: 4.5 },
-        { x: '2020-01', y: 4.5 }
+        { x: '2020-01', y: 4.5 },
+        { x: '2020-06', y: 4.5 },
+        { x: '2021-01', y: 4.0 },
+        { x: '2021-06', y: 3.5 },
       ],
       color: '#007bff'
     },
@@ -72,7 +77,11 @@ export const getLanguages = () => {
         { x: '2018-06', y: 3 },
         { x: '2019-01', y: 4 },
         { x: '2019-06', y: 5 },
-        { x: '2020-01', y: 5 }
+        { x: '2020-01', y: 5 },
+        { x: '2020-01', y: 5 },
+        { x: '2020-06', y: 5 },
+        { x: '2021-01', y: 5 },
+        { x: '2021-06', y: 5 },
       ],
       color: '#868e96'
     },
@@ -88,7 +97,13 @@ export const getLanguages = () => {
       id: 'Python',
       data: [
         { x: '2013-01', y: 1 },
-        { x: '2013-06', y: 1.1 }
+        { x: '2013-06', y: 1.1 },
+        { x: '2019-01', y: null },
+        { x: '2019-06', y: 1.5 },
+        { x: '2020-01', y: 2.0 },
+        { x: '2020-06', y: 2.5 },
+        { x: '2021-01', y: 3.0 },
+        { x: '2021-06', y: 3.0 },
       ],
       color: '#ffc107'
     },
@@ -98,7 +113,7 @@ export const getLanguages = () => {
         { x: '2013-01', y: 1 },
         { x: '2013-06', y: 1.25 }
       ],
-      color: '#dc3545'
+      color: '#eda4e3'
     },
     {
       id: 'SQL',
@@ -114,10 +129,21 @@ export const getLanguages = () => {
         { x: '2018-06', y: 4 },
         { x: '2019-01', y: 4.5 },
         { x: '2019-06', y: 4.0 },
-        { x: '2020-01', y: 4.0 }
+        { x: '2020-01', y: 4.0 },
+        { x: '2020-06', y: 4.0 },
+        { x: '2021-01', y: 4.0 },
+        { x: '2021-06', y: 4.5 },
       ],
       color: '#17a2b8'
-    } // TODO: Scala??
+    },
+    {
+      id: 'Ruby',
+      data: [
+        { x: '2021-01', y: 0.5 },
+        { x: '2021-06', y: 1.0 }
+      ],
+      color: '#dc3545'
+    }, // TODO: Scala??
   ];
 };
 
@@ -130,7 +156,10 @@ export const getSkills = () => {
         { x: '2018-06', y: 2 },
         { x: '2019-01', y: 4 },
         { x: '2019-06', y: 4.5 },
-        { x: '2020-01', y: 4.5 }
+        { x: '2020-01', y: 4.5 },
+        { x: '2020-06', y: 4.5 },
+        { x: '2021-01', y: 5 },
+        { x: '2021-06', y: 5 }
       ],
       color: '#007bff'
     },
@@ -157,7 +186,8 @@ export const getSkills = () => {
         { x: '2018-06', y: 5 },
         { x: '2019-01', y: 5 },
         { x: '2019-06', y: 5 },
-        { x: '2020-01', y: 5 }
+        { x: '2020-01', y: 5 },
+        { x: '2020-06', y: 4 }
       ],
       color: '#28a745'
     },
@@ -175,7 +205,10 @@ export const getSkills = () => {
         { x: '2018-06', y: 5 },
         { x: '2019-01', y: 5 },
         { x: '2019-06', y: 5 },
-        { x: '2020-01', y: 5 }
+        { x: '2020-01', y: 5 },
+        { x: '2020-06', y: 5 },
+        { x: '2021-01', y: 5 },
+        { x: '2021-06', y: 5 }
       ],
       color: '#ffc107'
     },
@@ -210,15 +243,14 @@ export const getSkills = () => {
       color: '#5c2aa4'
     },
     {
-      id: 'Jasmine',
-      data: [{ x: '2015-06', y: 2 }],
-      color: '#17a2b8'
-    },
-    {
       id: 'XML/XSD',
       data: [
         { x: '2018-06', y: 3 },
-        { x: '2019-01', y: 3.5 }
+        { x: '2019-01', y: 3.5 },
+        { x: '2020-01', y: 4 },
+        { x: '2020-06', y: 4 },
+        { x: '2021-01', y: 4.5 },
+        { x: '2021-06', y: 4.5 }
       ],
       color: '#38d78a'
     },
@@ -256,7 +288,10 @@ export const getSkills = () => {
         { x: '2018-06', y: 3.75 },
         { x: '2019-01', y: 4.0 },
         { x: '2019-06', y: 4.25 },
-        { x: '2020-01', y: 4.25 }
+        { x: '2020-01', y: 4.25 },
+        { x: '2020-06', y: 4 },
+        { x: '2021-01', y: 4 },
+        { x: '2021-06', y: 4 }
       ],
       color: '#f2945b'
     },
@@ -280,7 +315,10 @@ export const getSkills = () => {
         { x: '2018-06', y: 1.0 },
         { x: '2019-01', y: 2.0 },
         { x: '2019-06', y: 3.0 },
-        { x: '2020-01', y: 4.0 }
+        { x: '2020-01', y: 4.0 },
+        { x: '2020-06', y: 4 },
+        { x: '2021-01', y: 4.1 },
+        { x: '2021-06', y: 4.1 }
       ],
       color: '#eda4e3'
     },
@@ -301,32 +339,146 @@ export const getSkills = () => {
         { x: '2018-06', y: 4.5 },
         { x: '2019-01', y: 5.0 },
         { x: '2019-06', y: 5.0 },
-        { x: '2020-01', y: 5.0 }
+        { x: '2020-01', y: 5.0 },
+        { x: '2020-06', y: 4.9 },
+        { x: '2021-01', y: 4.9 },
+        { x: '2021-06', y: 4.9 }
       ],
       color: '#4295ba'
     },
     {
-      id: 'AWS Services (S3, Lambda)',
-      data: [
-        { x: '2018-06', y: 1.0 },
-        { x: '2019-01', y: 1.25 },
-        { x: '2019-06', y: 1.5 },
-        { x: '2020-01', y: 1.75 }
-      ],
-      color: '#2f3187'
-    },
-    {
       id: 'Docker',
       data: [
-        { x: '2020-01', y: 1.0 }
+        { x: '2020-01', y: 1.0 },
+        { x: '2020-06', y: 1.5 },
+        { x: '2021-01', y: 2.0 },
+        { x: '2021-06', y: 2.0 }
       ],
       color: '#bb2501'
     }
   ];
 };
 
+export const getAWSSkills = () => {
+  return [
+    {
+      id: 'Lambda/AWS Gateway',
+      data: [
+        { x: '2018-01', y: 0.5 },
+        { x: '2018-06', y: 0.75 },
+        { x: '2019-01', y: 1 },
+        { x: '2019-06', y: 1.25 },
+        { x: '2020-01', y: 2 },
+        { x: '2020-06', y: 3 },
+        { x: '2021-01', y: 4 },
+        { x: '2021-06', y: 4 },
+      ],
+      color: '#007bff'
+    },
+    {
+      id: 'EC2/ECS/Elastic Bean Stalk',
+      data: [
+        { x: '2016-01', y: 0.5 },
+        { x: '2016-06', y: 1 },
+        { x: '2017-01', y: 1 },
+        { x: '2017-06', y: 1 },
+        { x: '2018-01', y: 1.5 },
+        { x: '2018-06', y: 1.5 },
+        { x: '2019-01', y: 2 },
+        { x: '2019-06', y: 2.5 },
+        { x: '2020-01', y: 3 },
+        { x: '2020-06', y: 3.5 },
+        { x: '2021-01', y: 4 },
+        { x: '2021-06', y: 4.5 },
+      ],
+      color: '#868e96'
+    },
+    {
+      id: 'RDS',
+      data: [
+        { x: '2018-01', y: 0.5 },
+        { x: '2018-06', y: 1.0 },
+        { x: '2019-01', y: 1.0 },
+        { x: '2019-06', y: 1.0 },
+        { x: '2020-01', y: 2 },
+        { x: '2020-06', y: 3 },
+        { x: '2021-01', y: 3 },
+        { x: '2021-06', y: 3.5 },
+      ],
+      color: '#28a745'
+    },
+    {
+      id: 'Cognito',
+      data: [
+        { x: '2020-01', y: 1 },
+        { x: '2020-06', y: 2 },
+        { x: '2021-01', y: 3 },
+        { x: '2021-06', y: 3 },
+      ],
+      color: '#ffc107'
+    },
+    {
+      id: 'RedShift',
+      data: [
+        { x: '2021-01', y: 1 },
+        { x: '2021-06', y: 2.5 },
+      ],
+      color: '#dc3545'
+    },
+    {
+      id: 'Glue',
+      data: [
+        { x: '2021-01', y: 1 },
+        { x: '2021-06', y: 1.5 },
+      ],
+      color: '#5c2aa4'
+    },
+    {
+      id: 'QuickSight',
+      data: [        
+        { x: '2021-01', y: 1 },
+        { x: '2021-06', y: 2 },
+      ],
+      color: '#17a2b8'
+    }
+  ];
+};
+
 export const getProjects = () => {
   return [
+    {
+      title: 'Data Analytics Pipeline',
+      description: `<p>Oversaw a Data Analytics project, although I was not actively building I learned a lot about
+      AWS Glue / Apache Spark, RedShift, and related services. Helped build the data model for the data warehouse.</p>`,
+      timeFrame: '2 months (part time)',
+      outCome: 'Still in production.',
+      skills: ['Glue', 'RedShift', 'QuickSight', 'Lambda/AWS Gateway']
+    },
+    {
+      title: 'Address Verification Chrome Extension',
+      description: `<p>Built a <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/">Chrome Extension</a> to 
+      facilitate address verification during the underwriting process.
+       This tool leveraged the HouseCanary and Google APIs. Successfully published to the Chrome Store but the 
+       extension is private access for internal users only.</p>`,
+      timeFrame: '3 weeks (part time)',
+      outCome: 'Still in production.',
+      skills: ['JavaScript', 'Git', 'Chrome Extension', 'REST API']
+    },
+    {
+      title: 'Loan Management System',
+      description: `<p>Sole Developer of the internal Loan Management System. This project is used every day by 
+      internal teams to track loan updates, ACH transfer millions of dollars out to contractors, and review analytics.
+      Initially inherited as a small Python/Django prototype, I built the final project using a Node/Express backend, 
+      a React front end, and a PostgreSQL database. I also used Amazon Web Services heavily for 
+      this project including a secure VPC architecture deployed to EC2 servers, Cognito authorization 
+      and user management, Simple Email Service for notifications, Route 53 for DNS lookup / forwarding, 
+      and RDS for database management. This project leverages <a href="https://material-ui.com/">MaterialUI</a> 
+      for clean, easy to use components.</p>`,
+      timeFrame: '1 year (part time)',
+      outCome: 'Still in production, on-going enhancements.',
+      skills: ['React/Redux', 'JavaScript', 'CSS Grid', 'MaterialUI', 'Lodash', 'Axios', 'Node.js', 'npm', 'Webpack', 'Babel',
+          'Apache POI', 'Jest/Enzyme', 'Git', 'Route 53', 'VPC', 'EC2', 'RDS', 'PostgreSQL', 'Cognito']
+    },
     {
       title: 'Issue Management Rewrite',
       description: `<p>Rewrite of the core module of Pinnacle 21 Enterprise to move toward a Jira
@@ -337,13 +489,13 @@ export const getProjects = () => {
         Our services communicated with the backend via <a href="https://github.com/axios/axios">Axios</a>
         which greatly reduced the boilerplate of our http requests. The Backend API was completely 
         redesigned and simplified. This was my first time leading a major production React/Redux project.
-        Some of the biggest challenges we faced were CSS (TODO).</p><br/><p>Investigate websockets 
+        Some of the biggest challenges we faced were CSS related.</p><br/><p>Investigated websockets 
         but end up using local storage for cross tab synchronization</p>`,
-      timeFrame: '6 months',
-      outCome: 'Still in development.',
+      timeFrame: '1 year',
+      outCome: 'I left before project was complete but has since been moved to production.',
       skills: ['React/Redux', 'JavaScript', 'Java', 'Play Framework', 'CircleCI', 'CSS Grid', 'Flexbox', 'SplitJS',
           'AtlasKit', 'React Bootstrap', 'Lodash', 'Highcharts', 'Axios', 'Node.js', 'npm', 'Webpack', 'Babel',
-          'Apache POI', 'Jest/Enzyme', 'AWS Cognito', 'Git']
+          'Apache POI', 'Jest/Enzyme', 'Cognito', 'Git']
     },
     {
       title: 'Community Rewrite',
@@ -358,7 +510,7 @@ export const getProjects = () => {
           services for this project including S3, Lambda, and Cognito.</p>`,
       timeFrame: '6 months',
       outCome: 'Still in production, with patches and enhancements.',
-      skills: ['Electron', 'Node.js', 'React/Redux', 'Java', 'JavaScript', 'CircleCI', 'Apache POI', 'RxJava', 'AWS Services (S3, Lambda)', 'AWS Cognito', 'Git']
+      skills: ['Electron', 'Node.js', 'React/Redux', 'Java', 'JavaScript', 'CircleCI', 'Apache POI', 'RxJava', 'Lambda/AWS Gateway', 'Cognito', 'Git']
     },
     {
       title: 'Self Service Data Fitness',
@@ -567,7 +719,7 @@ export const getOtherSkills = () => {
       color: '#607057'
     },
     {
-      id: 'AWS Cognito',
+      id: 'Cognito',
       color: '#1831fe'
     },
     {
@@ -621,6 +773,42 @@ export const getOtherSkills = () => {
     {
       id: 'Jest/Enzyme',
       color: '#ddbaf9'
+    },
+    {
+      id: 'Route 53',
+      color: '#607057'
+    },
+    {
+      id: 'VPC',
+      color: '#1831fe'
+    },
+    {
+      id: 'EC2',
+      color: '#4e9789'
+    },
+    {
+      id: 'RDS',
+      color: '#82b42b'
+    },
+    {
+      id: 'Chrome Extension',
+      color: '#bfb3e5'
+    },
+    {
+      id: 'Glue',
+      color: '#885468'
+    },
+    {
+      id: 'RedShift',
+      color: '#dc3545'
+    },
+    {
+      id: 'QuickSight',
+      color: '#17a2b8'
+    },
+    {
+      id: 'Lambda/AWS Gateway',
+      color: '#007bff'
     }
   ]
 };
