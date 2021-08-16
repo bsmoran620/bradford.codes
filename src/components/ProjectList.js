@@ -58,7 +58,7 @@ function projectCardComponent(project, index, colorLookup) {
                     const colorFound = colorLookup.find(test => test.id === skill);
                     return <Badge
                         variant="primary"
-                        style={{backgroundColor: `${colorFound == undefined ? '#ffaabb' : colorFound.color}`}}
+                        style={{backgroundColor: `${colorFound === undefined ? '#ffaabb' : colorFound.color}`}}
                     >{skill}</Badge>
                 })}
             </div>
