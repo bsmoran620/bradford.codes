@@ -15,13 +15,13 @@ export function MarioKarty(props) {
             </div>
             <form name="character" data-netlify="true">
                 <p>
-                    <label className="radio">Mario <input type="radio" name="mario" value="mario"/></label>
+                    <label className="radio">Mario <input type="radio" name="mario"/></label>
                 </p>
                 <p>
-                    <label className="radio">Luigi <input type="radio" name="luigi" value="luigi"/></label>
+                    <label className="radio">Luigi <input type="radio" name="luigi"/></label>
                 </p>
                 <p>
-                    <label className="radio">Peach <input type="radio" name="peach" value="peach"/></label>
+                    <label className="radio">Peach <input type="radio" name="peach"/></label>
                 </p>
                 <p>
                     <button type="submit">Send</button>
