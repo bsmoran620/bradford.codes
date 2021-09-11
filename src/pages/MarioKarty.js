@@ -1,5 +1,5 @@
-import React, {Fragment, useState} from 'react';
-import { Dropdown, Button, InputGroup } from 'react-bootstrap';
+import React, {Fragment} from 'react';
+import { Button, InputGroup } from 'react-bootstrap';
 import '../resources/MarioKarty.css';
 
 export function MarioKarty(props) {
