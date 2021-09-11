@@ -48,5 +48,11 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- Help Netlify recognize React form for MarioKarty page -->
+    <form name="character" netlify netlify-honeypot="bot-field" hidden>
+      <input type="radio" name="mario"/>
+      <input type="radio" name="luigi"/>
+      <input type="radio" name="peach"/>
+    </form>
   </body>
 </html>
