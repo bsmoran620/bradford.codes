@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Button, InputGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import '../resources/MarioKarty.css';
 
 export function MarioKarty(props) {
