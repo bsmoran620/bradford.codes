@@ -1,8 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 
-export function Navigation() {
-  return (
+export function Navigation(props) {
+  const path = useLocation().pathname;
+  return path.search('/mario-karty') === -1 ? (
       <Navbar bg="dark" variant="dark" expand="md">
         <Navbar.Brand href="/">Brad Moran</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -16,5 +18,5 @@ export function Navigation() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-  );
+  ) : null;
 }

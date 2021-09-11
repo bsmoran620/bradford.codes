@@ -290,7 +290,7 @@ Place this code in the empty space below. */
   <line x1="100.000" y1="225.000" x2="100.000" y2="240.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="burlington_vt" class="cityxx" r="6" cy="105.000" cx="900.000" data-city-name="Burlington VT" />
   <line x1="900.000" y1="110.000" x2="900.000" y2="125.000" style="stroke:rgb(0,0,0);stroke-width:2" />
-  <circle id="lanconia_nh" class="cityxx" r="6" cy="115.000" cx="925.000" data-city-name="Lanconia NH" />
+  <circle id="laconia_nh" class="cityxx" r="6" cy="115.000" cx="925.000" data-city-name="Laconia NH" />
   <line x1="925.000" y1="120.000" x2="925.000" y2="135.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="thousandislands_ny clayton_ny alexandriabay_ny" class="cityxx" r="6" cy="115.000" cx="850.000" data-city-name="Thousand Islands, Clayton, Alexandria Bay NY" />
   <line x1="850.000" y1="120.000" x2="850.000" y2="135.000" style="stroke:rgb(0,0,0);stroke-width:2" />

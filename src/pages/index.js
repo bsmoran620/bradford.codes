@@ -1,0 +1,1 @@
+export { MarioKarty } from './MarioKarty';

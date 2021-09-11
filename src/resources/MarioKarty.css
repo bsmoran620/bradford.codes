@@ -1,0 +1,48 @@
+/**************************/
+/*     Mario Kart Theme   */
+/**************************/
+html, 
+body {
+    height: 120%;
+}
+#root {
+    height: 100%;
+}
+.mario-karty {
+    background-color: #2C3539;
+    height: 100%;
+}
+.welcome {
+    padding-top: 25px;
+}
+.main-image {
+    padding-bottom: 25px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    padding: 25px;
+    text-align: center;
+    color: red;
+    font-family: cursive;
+    font-weight: bold !important;
+}
+
+.radio {
+    color: white;
+    padding: 0px 10px 0px 10px;
+}
+
+.mario-kart-radio {
+    justify-content: center;
+}
+
+.mario-kart-submit {
+    text-align: center;
+}

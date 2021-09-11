@@ -3,9 +3,11 @@ import React from 'react';
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 
-export function Footer() {
-    return (
+export function Footer(props) {
+    const path = useLocation().pathname;
+    return path.search('/mario-karty') === -1 ? (
         <div className="footer">
             <small>Copyright &copy; {new Date().getFullYear()} Brad Moran. All Rights Reserved.</small>
             <div className="social-media-links">
@@ -20,5 +22,5 @@ export function Footer() {
                 <a href="https://www.linkedin.com/in/brad-moran-se"><FontAwesomeIcon size="lg" icon={faLinkedinIn} /></a>
             </div>
         </div>
-    );
+    ) : null;
 }
