@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import '../resources/MarioKarty.css';
 
 export function MarioKarty(props) {
@@ -14,15 +14,18 @@ export function MarioKarty(props) {
                 <img className="img-fluid center" src="marioKarty64.png" alt="alternative" width="50%" />
             </div>
             <form name="character" netlify>
-                <input type="radio" id="mario" name="mario" value="MARIO"/>
-                <label className="radio" for="mario">MARIO</label>
-                <input type="radio" id="luigi" name="luigi" value="LUIGI"/>
-                <label className="radio" for="luigi">LUIGI</label>
-                <input type="radio" id="peach" name="peach" value="PEACH"/>
-                <label className="radio" for="peach">PEACH</label>
-                <div className="mario-kart-submit">
-                    <Button variant="primary" type="submit">Submit</Button>
-                </div>
+                <p>
+                    <label className="radio">Mario <input type="radio" name="mario" value="mario"/></label>
+                </p>
+                <p>
+                    <label className="radio">Luigi <input type="radio" name="luigi" value="luigi"/></label>
+                </p>
+                <p>
+                    <label className="radio">Peach <input type="radio" name="peach" value="peach"/></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
             </form>
         </div>
         </Fragment>
