@@ -13,7 +13,7 @@ export function MarioKarty(props) {
             <div className="image-container main-image">
                 <img className="img-fluid center" src="marioKarty64.png" alt="alternative" width="50%" />
             </div>
-            <form name="character" netlify>
+            <form name="character" data-netlify="true">
                 <p>
                     <label className="radio">Mario <input type="radio" name="mario" value="mario"/></label>
                 </p>
