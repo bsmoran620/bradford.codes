@@ -1,8 +1,18 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 // import { Button } from 'react-bootstrap';
 import '../resources/MarioKarty.css';
 
 export function MarioKarty(props) {
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch('/.netlify/functions/MarioKart')
+            console.log(response);
+            const result = await response.text();
+            console.log(result);
+        }
+        fetchData();
+    });
+
     return (
         <Fragment>
         <div className="mario-karty">
@@ -17,12 +27,12 @@ export function MarioKarty(props) {
             <h1>Choose Your Character:</h1>
             <form name="character" method="post">
                 <input type="hidden" name="form-name" value="character" />
-                <div class="name-input">
+                <div className="name-input">
                 <p>
                     <label className="name-input">Your Name: <input type="text" name="name"/></label>
                 </p>
                 </div>
-                <div class="col-12 mario-kart-radio">
+                <div className="col-12 mario-kart-radio">
                 <p>
                     <input type="radio" name="char" value="Mario"/><label className="radio">Mario</label>
                 </p>
@@ -39,7 +49,7 @@ export function MarioKarty(props) {
                     <input type="radio" name="char" value="Waluigi"/><label className="radio">Waluigi</label>
                 </p>
                 </div>
-                <div class="col-12 mario-kart-radio">
+                <div className="col-12 mario-kart-radio">
                 <p>
                     <input type="radio" name="char" value="Yoshi"/><label className="radio">Yoshi</label>
                 </p>
@@ -56,7 +66,7 @@ export function MarioKarty(props) {
                     <input type="radio" name="char" value="Daisy"/><label className="radio">Daisy</label>
                 </p>
                 </div>
-                <div class="col-12 mario-kart-radio">
+                <div className="col-12 mario-kart-radio">
                 <p>
                     <input type="radio" name="char" value="Boo"/><label className="radio">Boo</label>
                 </p>
@@ -73,7 +83,7 @@ export function MarioKarty(props) {
                     <input type="radio" name="char" value="Birdo"/><label className="radio">Birdo</label>
                 </p>
                 </div>
-                <div class="col-12 mario-kart-radio">
+                <div className="col-12 mario-kart-radio">
                 <p>
                     <input type="radio" name="char" value="Chain Chomp"/><label className="radio">Chain Chomp</label>
                 </p>
@@ -90,7 +100,7 @@ export function MarioKarty(props) {
                     <input type="radio" name="char" value="Toadette"/><label className="radio">Toadette</label>
                 </p>
                 </div>
-                <div class="mario-kart-submit">
+                <div className="mario-kart-submit">
                 <p>
                     <button type="submit">Send</button>
                 </p>

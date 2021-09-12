@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@nivo/line": "^0.59.3",
     "bootstrap": "^4.5.0",
+    "netlify-cli": "^6.8.12",
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
