@@ -1,17 +1,29 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 // import { Button } from 'react-bootstrap';
 import '../resources/MarioKarty.css';
 
 export function MarioKarty(props) {
+    const[characters, setCharacters] = useState([]);
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('/.netlify/functions/MarioKart')
-            console.log(response);
-            const result = await response.text();
+            var myHeaders = new Headers();
+            // obviously not ideal...
+            myHeaders.append("Authorization", "Bearer T_5MAZY6k7t2X02PZXvT8yPktCO13o7A8iqMcaRLDv0");
+
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+
+            const res = await fetch("https://api.netlify.com/api/v1/forms/613d05599aa89c00075b6a6b/submissions", requestOptions)
+            console.log(res);
+            const result = await res.json();  
             console.log(result);
+            setCharacters(result.map(char => ({"name": char.data.name, "character": char.data.char})));
         }
         fetchData();
-    });
+    }, []);
 
     return (
         <Fragment>
@@ -105,6 +117,7 @@ export function MarioKarty(props) {
                     <button type="submit">Send</button>
                 </p>
                 </div>
+                {characters.map(character => <h1>{character.name} selected {character.character}</h1>)}
             </form>
         </div>
         </Fragment>
