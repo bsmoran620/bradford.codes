@@ -40,9 +40,10 @@ h1 {
 }
 
 .mario-kart-radio {
+    display: inline-flex;
     justify-content: center;
 }
 
-.mario-kart-submit {
+.mario-kart-submit, .name-input {
     text-align: center;
 }
