@@ -19,64 +19,64 @@ export function MarioKarty(props) {
                     <label className="name-input">Your Name: <input type="text" name="name"/></label>
                 </p>
                 <p>
-                    <label className="radio">Mario <input type="radio" name="char" value="mario"/></label>
+                    <label className="radio">Mario <input type="radio" name="char" value="Mario"/></label>
                 </p>
                 <p>
-                    <label className="radio">Luigi <input type="radio" name="char" value="luigi"/></label>
+                    <label className="radio">Luigi <input type="radio" name="char" value="Luigi"/></label>
                 </p>
                 <p>
-                    <label className="radio">Peach <input type="radio" name="char" value="peach"/></label>
+                    <label className="radio">Peach <input type="radio" name="char" value="Peach"/></label>
                 </p>
                 <p>
-                    <label className="radio">Wario <input type="radio" name="char" value="wario"/></label>
+                    <label className="radio">Wario <input type="radio" name="char" value="Wario"/></label>
                 </p>
                 <p>
-                    <label className="radio">Waluigi <input type="radio" name="char" value="waluigi"/></label>
+                    <label className="radio">Waluigi <input type="radio" name="char" value="Waluigi"/></label>
                 </p>
                 <p>
-                    <label className="radio">Yoshi <input type="radio" name="char" value="yoshi"/></label>
+                    <label className="radio">Yoshi <input type="radio" name="char" value="Yoshi"/></label>
                 </p>
                 <p>
-                    <label className="radio">D.K. <input type="radio" name="char" value="D.K>"/></label>
+                    <label className="radio">D.K. <input type="radio" name="char" value="DK"/></label>
                 </p>
                 <p>
-                    <label className="radio">Toad <input type="radio" name="char" value="toad"/></label>
+                    <label className="radio">Toad <input type="radio" name="char" value="Toad"/></label>
                 </p>
                 <p>
-                    <label className="radio">Bowser <input type="radio" name="char" value="bowser"/></label>
+                    <label className="radio">Bowser <input type="radio" name="char" value="Bowser"/></label>
                 </p>
                 <p>
-                    <label className="radio">Daisy <input type="radio" name="char" value="daisy"/></label>
+                    <label className="radio">Daisy <input type="radio" name="char" value="Daisy"/></label>
                 </p>
                 <p>
-                    <label className="radio">Boo <input type="radio" name="char" value="boo"/></label>
+                    <label className="radio">Boo <input type="radio" name="char" value="Boo"/></label>
                 </p>
                 <p>
-                    <label className="radio">Diddy Kong <input type="radio" name="char" value="diddy-kong"/></label>
+                    <label className="radio">Diddy Kong <input type="radio" name="char" value="Diddy-Kong"/></label>
                 </p>
                 <p>
-                    <label className="radio">Koopa Troopa <input type="radio" name="char" value="koopa-troopa"/></label>
+                    <label className="radio">Koopa Troopa <input type="radio" name="char" value="Koopa-Troopa"/></label>
                 </p>
                 <p>
-                    <label className="radio">Goomba <input type="radio" name="char" value="goomba"/></label>
+                    <label className="radio">Goomba <input type="radio" name="char" value="Goomba"/></label>
                 </p>
                 <p>
-                    <label className="radio">Birdo <input type="radio" name="char" value="birdo"/></label>
+                    <label className="radio">Birdo <input type="radio" name="char" value="Birdo"/></label>
                 </p>
                 <p>
-                    <label className="radio">Chain Chomp <input type="radio" name="char" value="chain-chomp"/></label>
+                    <label className="radio">Chain Chomp <input type="radio" name="char" value="Chain-Chomp"/></label>
                 </p>
                 <p>
-                    <label className="radio">Rosalina <input type="radio" name="char" value="rosalina"/></label>
+                    <label className="radio">Rosalina <input type="radio" name="char" value="Rosalina"/></label>
                 </p>
                 <p>
-                    <label className="radio">Baby Bowser <input type="radio" name="char" value="baby-bowser"/></label>
+                    <label className="radio">Baby Bowser <input type="radio" name="char" value="Baby-Bowser"/></label>
                 </p>
                 <p>
-                    <label className="radio">Pirhana Plant <input type="radio" name="char" value="pirhana-plant"/></label>
+                    <label className="radio">Pirhana Plant <input type="radio" name="char" value="Pirhana-Plant"/></label>
                 </p>
                 <p>
-                    <label className="radio">Toadette <input type="radio" name="char" value="toadette"/></label>
+                    <label className="radio">Toadette <input type="radio" name="char" value="Toadette"/></label>
                 </p>
                 <p>
                     <button type="submit">Send</button>
