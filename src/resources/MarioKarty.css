@@ -3,7 +3,7 @@
 /**************************/
 html, 
 body {
-    height: 120%;
+    height: 150%;
 }
 #root {
     height: 100%;
@@ -30,11 +30,11 @@ h1 {
     padding: 25px;
     text-align: center;
     color: red;
-    font-family: cursive;
+    font-family: 'Creepster', serif;;
     font-weight: bold !important;
 }
 
-.radio {
+.radio, .name-input {
     color: white;
     padding: 0px 10px 0px 10px;
 }
