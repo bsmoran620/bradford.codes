@@ -10,9 +10,11 @@ export function MarioKarty(props) {
                 <img className="img-fluid center" src="Banshee_Boardwalk.png" alt="alternative" width="50%" />
             </div>
             <h1>YOU'RE INVITED!</h1>
+            <h1>October 31, 2021</h1>
             <div className="image-container main-image">
                 <img className="img-fluid center" src="marioKarty64.png" alt="alternative" width="50%" />
             </div>
+            <h1>Choose Your Character:</h1>
             <form name="character" method="post">
                 <input type="hidden" name="form-name" value="character" />
                 <div class="name-input">
@@ -42,7 +44,7 @@ export function MarioKarty(props) {
                     <input type="radio" name="char" value="Yoshi"/><label className="radio">Yoshi</label>
                 </p>
                 <p>
-                    <input type="radio" name="char" value="DK"/><label className="radio">D.K.</label>
+                    <input type="radio" name="char" value="D.K."/><label className="radio">D.K.</label>
                 </p>
                 <p>
                     <input type="radio" name="char" value="Toad"/><label className="radio">Toad</label>
@@ -59,10 +61,10 @@ export function MarioKarty(props) {
                     <input type="radio" name="char" value="Boo"/><label className="radio">Boo</label>
                 </p>
                 <p>
-                    <input type="radio" name="char" value="Diddy-Kong"/><label className="radio">Diddy Kong</label>
+                    <input type="radio" name="char" value="Diddy Kong"/><label className="radio">Diddy Kong</label>
                 </p>
                 <p>
-                    <input type="radio" name="char" value="Koopa-Troopa"/><label className="radio">Koopa Troopa</label>
+                    <input type="radio" name="char" value="Koopa Troopa"/><label className="radio">Koopa Troopa</label>
                 </p>
                 <p>
                     <input type="radio" name="char" value="Goomba"/><label className="radio">Goomba</label>
@@ -73,16 +75,16 @@ export function MarioKarty(props) {
                 </div>
                 <div class="col-12 mario-kart-radio">
                 <p>
-                    <input type="radio" name="char" value="Chain-Chomp"/><label className="radio">Chain Chomp</label>
+                    <input type="radio" name="char" value="Chain Chomp"/><label className="radio">Chain Chomp</label>
                 </p>
                 <p>
                     <input type="radio" name="char" value="Rosalina"/><label className="radio">Rosalina</label>
                 </p>
                 <p>
-                    <input type="radio" name="char" value="Baby-Bowser"/><label className="radio">Baby Bowser</label>
+                    <input type="radio" name="char" value="Baby Bowser"/><label className="radio">Baby Bowser</label>
                 </p>
                 <p>
-                    <input type="radio" name="char" value="Pirhana-Plant"/><label className="radio">Pirhana Plant</label>
+                    <input type="radio" name="char" value="Piranha Plant"/><label className="radio">Piranha Plant</label>
                 </p>
                 <p>
                     <input type="radio" name="char" value="Toadette"/><label className="radio">Toadette</label>
