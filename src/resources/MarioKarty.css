@@ -38,11 +38,11 @@
     justify-content: center;
 }
 
-.name-input {
+.mario-kart-submit, .name-input {
     text-align: center;
 }
 
-.mario-kart-submit {
-    text-align: center;
+.mario-kart-responses {
     padding-bottom: 500px;
+    color: red;
 }

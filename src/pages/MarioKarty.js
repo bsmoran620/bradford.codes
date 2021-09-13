@@ -108,7 +108,9 @@ export function MarioKarty(props) {
                         <button type="submit">Submit</button>
                     </p>
                 </div>
-                {characters.map(character => <h1>{character.name} selected {character.character}</h1>)}
+                <div className="mario-kart-responses">
+                    {characters.map(character => <h1>{character.name} selected {character.character}</h1>)}
+                </div>
             </form>
         </div>
         </Fragment>
