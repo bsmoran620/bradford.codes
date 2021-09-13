@@ -105,7 +105,7 @@ export function MarioKarty(props) {
                 </div>
                 <div className="mario-kart-submit">
                     <p>
-                        <button type="submit">Submit</button>
+                        <button type="submit" className="submit-button">Submit</button>
                     </p>
                 </div>
                 <div className="mario-kart-responses">
