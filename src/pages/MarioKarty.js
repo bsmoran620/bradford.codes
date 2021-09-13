@@ -6,21 +6,12 @@ export function MarioKarty(props) {
     const[characters, setCharacters] = useState([]);
     useEffect(() => {
         async function fetchData() {
-            var myHeaders = new Headers();
-            // obviously not ideal...
-            myHeaders.append("Authorization", "Bearer T_5MAZY6k7t2X02PZXvT8yPktCO13o7A8iqMcaRLDv0");
 
-            var requestOptions = {
-                method: 'GET',
-                headers: myHeaders,
-                redirect: 'follow'
-            };
-
-            const res = await fetch("https://api.netlify.com/api/v1/forms/613d05599aa89c00075b6a6b/submissions", requestOptions)
+            const res = await fetch("https://k4bh9aw0o1.execute-api.us-east-2.amazonaws.com/default/marioKarty")
             console.log(res);
             const result = await res.json();  
             console.log(result);
-            setCharacters(result.map(char => ({"name": char.data.name, "character": char.data.char})));
+            setCharacters(result);
         }
         fetchData();
     }, []);
@@ -113,9 +104,9 @@ export function MarioKarty(props) {
                 </p>
                 </div>
                 <div className="mario-kart-submit">
-                <p>
-                    <button type="submit">Send</button>
-                </p>
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
                 </div>
                 {characters.map(character => <h1>{character.name} selected {character.character}</h1>)}
             </form>

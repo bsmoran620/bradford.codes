@@ -1,13 +1,7 @@
 /**************************/
 /*     Mario Kart Theme   */
 /**************************/
-html, 
-body {
-    height: 150%;
-}
-#root {
-    height: 100%;
-}
+
 .mario-karty {
     background-color: #2C3539;
     height: 100%;
@@ -26,7 +20,7 @@ body {
     width: 50%;
 }
 
-h1 {
+.mario-karty > h1 {
     padding: 25px;
     text-align: center;
     color: red;
@@ -44,6 +38,11 @@ h1 {
     justify-content: center;
 }
 
-.mario-kart-submit, .name-input {
+.name-input {
     text-align: center;
+}
+
+.mario-kart-submit {
+    text-align: center;
+    padding-bottom: 500px;
 }
