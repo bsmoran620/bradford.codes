@@ -24,7 +24,7 @@
     padding: 25px;
     text-align: center;
     color: red;
-    font-family: 'Creepster', serif;;
+    font-family: 'Creepster', serif;
     font-weight: bold !important;
 }
 
@@ -46,6 +46,7 @@
     padding-bottom: 500px;
     color: red;
     text-align: center;
+    font-family: 'Creepster', serif;
 }
 
 .submit-button {
