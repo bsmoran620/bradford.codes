@@ -465,6 +465,13 @@ export const getProjects = () => {
       skills: ['JavaScript', 'Git', 'Chrome Extension', 'REST API']
     },
     {
+      title: 'Google Drive Scripting',
+      description: `<p>Wrote Google App Scripts to manipulate and move Google Doc files to support daily document processing.</p>`,
+      timeFrame: '1 week (part time)',
+      outCome: 'Still in production.',
+      skills: ['JavaScript', 'Google Script']
+    },
+    {
       title: 'Loan Management System',
       description: `<p>Sole Developer of the internal Loan Management System. This project is used every day by 
       internal teams to track loan updates, ACH transfer millions of dollars out to contractors, and review analytics.
@@ -809,6 +816,10 @@ export const getOtherSkills = () => {
     {
       id: 'Lambda/AWS Gateway',
       color: '#007bff'
+    },
+    {
+      id: 'Google Script',
+      color: '#703d74'
     }
   ]
 };
