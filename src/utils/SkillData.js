@@ -82,6 +82,8 @@ export const getLanguages = () => {
         { x: '2020-06', y: 5 },
         { x: '2021-01', y: 5 },
         { x: '2021-06', y: 5 },
+        { x: '2022-01', y: 5 },
+        { x: '2022-06', y: 5 },
       ],
       color: '#868e96'
     },
@@ -104,6 +106,8 @@ export const getLanguages = () => {
         { x: '2020-06', y: 2.5 },
         { x: '2021-01', y: 3.0 },
         { x: '2021-06', y: 3.0 },
+        { x: '2022-01', y: 3.0 },
+        { x: '2022-06', y: 3.0 },
       ],
       color: '#ffc107'
     },
@@ -133,6 +137,8 @@ export const getLanguages = () => {
         { x: '2020-06', y: 4.0 },
         { x: '2021-01', y: 4.0 },
         { x: '2021-06', y: 4.5 },
+        { x: '2022-01', y: 4.5 },
+        { x: '2022-06', y: 4.5 },
       ],
       color: '#17a2b8'
     },
@@ -159,7 +165,9 @@ export const getSkills = () => {
         { x: '2020-01', y: 4.5 },
         { x: '2020-06', y: 4.5 },
         { x: '2021-01', y: 5 },
-        { x: '2021-06', y: 5 }
+        { x: '2021-06', y: 5 },
+        { x: '2022-01', y: 5 },
+        { x: '2022-06', y: 5 },
       ],
       color: '#007bff'
     },
@@ -208,7 +216,9 @@ export const getSkills = () => {
         { x: '2020-01', y: 5 },
         { x: '2020-06', y: 5 },
         { x: '2021-01', y: 5 },
-        { x: '2021-06', y: 5 }
+        { x: '2021-06', y: 5 },
+        { x: '2022-01', y: 5 },
+        { x: '2022-06', y: 5 },
       ],
       color: '#ffc107'
     },
@@ -267,7 +277,9 @@ export const getSkills = () => {
       data: [
         { x: '2019-01', y: 2 },
         { x: '2019-06', y: 2 },
-        { x: '2020-01', y: 2.5 }
+        { x: '2020-01', y: 2.5 },
+        { x: '2022-01', y: 3.0 },
+        { x: '2022-06', y: 3.0 },
       ],
       color: '#38d78a'
     },
@@ -291,7 +303,9 @@ export const getSkills = () => {
         { x: '2020-01', y: 4.25 },
         { x: '2020-06', y: 4 },
         { x: '2021-01', y: 4 },
-        { x: '2021-06', y: 4 }
+        { x: '2021-06', y: 4 },
+        { x: '2022-01', y: 4 },
+        { x: '2022-06', y: 4 }
       ],
       color: '#f2945b'
     },
@@ -318,7 +332,9 @@ export const getSkills = () => {
         { x: '2020-01', y: 4.0 },
         { x: '2020-06', y: 4 },
         { x: '2021-01', y: 4.1 },
-        { x: '2021-06', y: 4.1 }
+        { x: '2021-06', y: 4.1 },
+        { x: '2022-01', y: 4.1 },
+        { x: '2022-06', y: 4.1 },
       ],
       color: '#eda4e3'
     },
@@ -342,7 +358,9 @@ export const getSkills = () => {
         { x: '2020-01', y: 5.0 },
         { x: '2020-06', y: 4.9 },
         { x: '2021-01', y: 4.9 },
-        { x: '2021-06', y: 4.9 }
+        { x: '2021-06', y: 4.9 },
+        { x: '2022-01', y: 5.0 },
+        { x: '2022-06', y: 5.0 },
       ],
       color: '#4295ba'
     },
@@ -352,9 +370,25 @@ export const getSkills = () => {
         { x: '2020-01', y: 1.0 },
         { x: '2020-06', y: 1.5 },
         { x: '2021-01', y: 2.0 },
-        { x: '2021-06', y: 2.0 }
+        { x: '2021-06', y: 2.0 },
       ],
       color: '#bb2501'
+    },
+    {
+      id: 'Serverless Framework',
+      data: [
+        { x: '2022-01', y: 2.0 },
+        { x: '2022-06', y: 3.0 },
+      ],
+      color: '#868e96'
+    },
+    {
+      id: 'Angular',
+      data: [
+        { x: '2022-01', y: 1.5 },
+        { x: '2022-06', y: 2.5 },
+      ],
+      color: '#868e96'
     }
   ];
 };
@@ -372,6 +406,8 @@ export const getAWSSkills = () => {
         { x: '2020-06', y: 3 },
         { x: '2021-01', y: 4 },
         { x: '2021-06', y: 4 },
+        { x: '2022-01', y: 4 },
+        { x: '2022-06', y: 4 },
       ],
       color: '#007bff'
     },
@@ -390,6 +426,8 @@ export const getAWSSkills = () => {
         { x: '2020-06', y: 3.5 },
         { x: '2021-01', y: 4 },
         { x: '2021-06', y: 4.5 },
+        { x: '2022-01', y: 4.5 },
+        { x: '2022-06', y: 4.5 },
       ],
       color: '#868e96'
     },
@@ -404,6 +442,8 @@ export const getAWSSkills = () => {
         { x: '2020-06', y: 3 },
         { x: '2021-01', y: 3 },
         { x: '2021-06', y: 3.5 },
+        { x: '2022-01', y: 3.5 },
+        { x: '2022-06', y: 3.5 },
       ],
       color: '#28a745'
     },
@@ -414,6 +454,8 @@ export const getAWSSkills = () => {
         { x: '2020-06', y: 2 },
         { x: '2021-01', y: 3 },
         { x: '2021-06', y: 3 },
+        { x: '2022-01', y: 3 },
+        { x: '2022-06', y: 3 },
       ],
       color: '#ffc107'
     },
@@ -446,6 +488,13 @@ export const getAWSSkills = () => {
 
 export const getProjects = () => {
   return [
+    {
+      title: 'Billing Project',
+      description: `<p>Led the billing project which extracted complicated billing logic out of our system to an integration with a third party billing system. This allowed us to bill at a more granular level. This project leveraged the Serverless Framework on top of AWS Lambda and many other AWS services. The backend was Node/Express with Sequelize ORM, and some minor frontend Angular code. Some tests written in Jest.</p>`,
+      timeFrame: '4 months',
+      outCome: 'Deploying to Production',
+      skills: ['Serverless Framework', 'JavaScript', 'Jest/Enzyme', 'Git', 'Lambda/AWS Gateway', 'Node.js', 'npm', 'Angular']
+    },
     {
       title: 'Data Analytics Pipeline',
       description: `<p>Oversaw a Data Analytics project, although I was not actively building I learned a lot about
