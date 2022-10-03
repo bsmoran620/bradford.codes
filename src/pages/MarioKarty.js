@@ -23,7 +23,7 @@ export function MarioKarty(props) {
                 <img className="img-fluid center" src="Banshee_Boardwalk.png" alt="alternative" width="50%" />
             </div>
             <h1>YOU'RE INVITED!</h1>
-            <h1>October 31, 2021</h1>
+            <h1>Saturday October 29, 2022</h1>
             <div className="image-container main-image">
                 <img className="img-fluid center" src="marioKarty64.png" alt="alternative" width="50%" />
             </div>
