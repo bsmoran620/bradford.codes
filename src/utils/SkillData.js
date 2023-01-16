@@ -84,6 +84,8 @@ export const getLanguages = () => {
         { x: '2021-06', y: 5 },
         { x: '2022-01', y: 5 },
         { x: '2022-06', y: 5 },
+        { x: '2023-01', y: 5 },
+        { x: '2023-06', y: 5 },
       ],
       color: '#868e96'
     },
@@ -108,6 +110,7 @@ export const getLanguages = () => {
         { x: '2021-06', y: 3.0 },
         { x: '2022-01', y: 3.0 },
         { x: '2022-06', y: 3.0 },
+        { x: '2023-01', y: 3.0 },
       ],
       color: '#ffc107'
     },
@@ -139,6 +142,8 @@ export const getLanguages = () => {
         { x: '2021-06', y: 4.5 },
         { x: '2022-01', y: 4.5 },
         { x: '2022-06', y: 4.5 },
+        { x: '2023-01', y: 4.5 },
+        { x: '2023-06', y: 4.5 },
       ],
       color: '#17a2b8'
     },
@@ -168,8 +173,20 @@ export const getSkills = () => {
         { x: '2021-06', y: 5 },
         { x: '2022-01', y: 5 },
         { x: '2022-06', y: 5 },
+        { x: '2023-01', y: 5 },
+        { x: '2023-06', y: 5 },
       ],
       color: '#007bff'
+    },
+    {
+      id: 'React Native',
+      data: [
+        { x: '2022-01', y: 1 },
+        { x: '2022-06', y: 2 },
+        { x: '2023-01', y: 3 },
+        { x: '2023-06', y: 3.5 },
+      ],
+      color: '#FF7514'
     },
     {
       id: 'Apache Jena (Semantic Web)',
@@ -488,6 +505,13 @@ export const getAWSSkills = () => {
 
 export const getProjects = () => {
   return [
+    {
+      title: 'Habit Tracking App',
+      description: `<p>Building a side project to learn more about mobile development. The application allows users to track their daily habits and progress over time.</p>`,
+      timeFrame: '1 year',
+      outCome: 'Working toward intitial release',
+      skills: ['Serverless Framework', 'JavaScript', 'Git', 'Lambda/AWS Gateway', 'Node.js', 'npm', 'React Native']
+    },
     {
       title: 'Billing Project',
       description: `<p>Led the billing project which extracted complicated billing logic out of our system to an integration with a third party billing system. This allowed us to bill at a more granular level. This project leveraged the Serverless Framework on top of AWS Lambda and many other AWS services. The backend was Node/Express with Sequelize ORM, and some minor frontend Angular code. Some tests written in Jest.</p>`,

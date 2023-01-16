@@ -262,6 +262,8 @@ Place this code in the empty space below. */
   <line x1="940.000" y1="200.000" x2="920.000" y2="200.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="orlando_fl" class="cityxx" r="6" cy="500.000" cx="812.000" data-city-name="Orlando FL" />
   <line x1="815.000" y1="505.000" x2="825.000" y2="520.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="clearwater_fl" class="cityxx" r="6" cy="505.000" cx="780.000" data-city-name="Clearwater FL" />
+  <line x1="783.000" y1="510.000" x2="793.000" y2="525.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="keywest_fl" class="cityxx b-only" r="6" cy="577.000" cx="812.000" data-city-name="Key West FL" />
   <line x1="815.000" y1="582.000" x2="825.000" y2="597.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="staugustine_fl jupiter_fl" class="cityxx" r="6" cy="460.000" cx="828.000" data-city-name="St. Augustine FL" />
@@ -314,6 +316,8 @@ Place this code in the empty space below. */
   <line x1="270.000" y1="135.000" x2="270.000" y2="150.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="bozeman_mt" class="cityxx" r="6" cy="95.000" cx="280.000" data-city-name="Bozeman MT" />
   <line x1="280.000" y1="100.000" x2="280.000" y2="115.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="wilmington_de" class="cityxx" r="6" cy="240.000" cx="905.000" data-city-name="Wilmington DE" />
+  <line x1="900.000" y1="240.000" x2="880.000" y2="240.000" style="stroke:rgb(0,0,0);stroke-width:2" />
 </g>
 <circle class="state borders DCcircle" id="DC" cx="858.5" cy="257.9" r="5">
   <title>District of Columbia</title>
