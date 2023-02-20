@@ -318,6 +318,8 @@ Place this code in the empty space below. */
   <line x1="280.000" y1="100.000" x2="280.000" y2="115.000" style="stroke:rgb(0,0,0);stroke-width:2" />
   <circle id="wilmington_de" class="cityxx" r="6" cy="240.000" cx="905.000" data-city-name="Wilmington DE" />
   <line x1="900.000" y1="240.000" x2="880.000" y2="240.000" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <circle id="moneterey_ca bigsur_ca sanluisobispo_ca losangeles_ca" class="cityxx" r="6" cy="335.000" cx="100.000" data-city-name="Los Angeles, San Luis Obispo, Big Sur, Moneterey CA" />
+  <line x1="100.000" y1="340.000" x2="100.000" y2="355.000" style="stroke:rgb(0,0,0);stroke-width:2" />
 </g>
 <circle class="state borders DCcircle" id="DC" cx="858.5" cy="257.9" r="5">
   <title>District of Columbia</title>
