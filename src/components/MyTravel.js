@@ -1,6 +1,6 @@
 import React, {useState, Fragment} from 'react';
-import { ReactComponent as WorldMap } from './../resources/worldMap.svg';
-import { ReactComponent as USAMap } from './../resources/usaMap.svg';
+import WorldMap from './../resources/worldMap.svg?react';
+import USAMap from './../resources/usaMap.svg?react';
 
 /*
  * Improvement List:

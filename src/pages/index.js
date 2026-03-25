@@ -1,1 +1,0 @@
-export { MarioKarty } from './MarioKarty';
