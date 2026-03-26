@@ -1,5 +1,6 @@
 /**
  * Data-driven travel stops (lat/lng) and trip copy for My Travel.
+ * TRIPS group stops by tripId; each place.tripId resolves to one trip (multi- or single-stop).
  * worldMap: show pin on world view; usMap: show pin on US detail view.
  */
 
@@ -139,6 +140,180 @@ const US_STOPS = [
   ['havasupai-az', 36.2344, -112.6865, 'Havasupai, AZ']
 ];
 
+/**
+ * Trips group one or more stops (place ids). Clicking any stop shows this trip’s details.
+ * S3 / CloudFront: images at {tripId}/{filename}. Optional `photoIds` lists filenames for the gallery.
+ */
+const TRIPS = {
+  'belgium-be': {
+    stopIds: ['ghent-be', 'bruges-be', 'antwerp-be'],
+    title: 'Belgium',
+    dateRange: '—',
+    summary:
+      'Ghent, Bruges, and Antwerp in one loop — canals, guildhalls, chocolate, and Flemish cities made for walking.',
+    highlights: [
+      'Ghent: Graslei and medieval core',
+      'Bruges: storybook canals and cobbles',
+      'Antwerp: cathedral, old town, port-city energy'
+    ]
+  },
+  'quebec-ca': {
+    stopIds: ['mont-tremblant-ca', 'montreal-ca'],
+    title: 'Quebec, Canada',
+    dateRange: '—',
+    summary:
+      'Mont-Tremblant’s mountain village and Montreal’s food and festival energy — Laurentian scenery plus city life.',
+    highlights: ['Mountain trails / skiing', 'Montreal neighborhoods and dining']
+  },
+  'puerto-rico-pr': {
+    stopIds: [
+      'sanjuan-pr',
+      'rincon-pr',
+      'aguadilla-pr',
+      'mayaguez-pr',
+      'ponce-pr',
+      'luquillo-pr'
+    ],
+    title: 'Puerto Rico',
+    dateRange: '—',
+    summary:
+      'Old San Juan’s forts and colors, surf towns on the west coast, and rainforest-lined beaches — island hops by car.',
+    highlights: ['El Morro and Old San Juan', 'Rincón and the west coast', 'Luquillo / northeast coast']
+  },
+  'greece-gr': {
+    stopIds: ['santorini-gr', 'milos-gr', 'athens-gr'],
+    title: 'Greece',
+    dateRange: '—',
+    summary:
+      'Island caldera views and ancient sites — ferries, beaches, and Athens as bookends.',
+    highlights: ['Santorini and Milos', 'Athens and antiquities']
+  },
+  'panama-pa': {
+    stopIds: ['panama-city-pa', 'bocas-del-toro-pa'],
+    title: 'Panama',
+    dateRange: '—',
+    summary: 'Canal-city skyline and Caribbean islands — city energy plus slow Bocas time.',
+    highlights: ['Panama City', 'Bocas del Toro']
+  },
+  'costa-rica-cr': {
+    stopIds: ['san-jose-cr', 'la-fortuna-cr', 'tamarindo-cr', 'santa-teresa-cr'],
+    title: 'Costa Rica',
+    dateRange: '—',
+    summary:
+      'Volcano country, cloud forests, and two coasts — wildlife, surf towns, and pura vida pace.',
+    highlights: ['La Fortuna / Arenal', 'Pacific beaches']
+  },
+  'mexico-yucatan-mx': {
+    stopIds: ['tulum-mx', 'chichen-itza-mx'],
+    title: 'Yucatán, Mexico',
+    dateRange: '—',
+    summary: 'Riviera Maya coast and Maya ruins — beaches plus Chichén Itzá inland.',
+    highlights: ['Tulum area', 'Chichén Itzá']
+  },
+  'peru-pe': {
+    stopIds: ['puerto-malabrigo-pe', 'cusco-pe', 'aguas-calientes-pe'],
+    title: 'Peru',
+    dateRange: '—',
+    summary: 'Northern coast, highland Cusco, and the Sacred Valley approach to Machu Picchu.',
+    highlights: ['Huanchaco / Trujillo coast', 'Cusco', 'Aguas Calientes / Machu Picchu']
+  },
+  'dominican-do': {
+    stopIds: ['punta-cana-do', 'la-romana-do', 'miches-do'],
+    title: 'Dominican Republic',
+    dateRange: '—',
+    summary: 'Resort coasts and quieter east — beaches, golf, and day-trip pockets.',
+    highlights: ['Punta Cana', 'La Romana', 'Miches']
+  },
+  'india-2025': {
+    stopIds: [
+      'bengaluru-in',
+      'goa-in',
+      'mumbai-in',
+      'udupi-in',
+      'mysuru-in',
+      'mangaluru-in',
+      'coorg-in'
+    ],
+    photoIds: [
+      'bengaluru-temple.jpeg',
+      'bengaluru-farm.jpeg',
+      'bengaluru-mansion.jpeg',
+      'dosa.jpeg',
+    ],
+    title: 'India 2025',
+    dateRange: 'September 2025',
+    summary:
+      'First India run — Karnataka coast and cities, Goa, and Mumbai. Temples, food, and monsoon-season energy.',
+    highlights: ['Karnataka route', 'Goa', 'Mumbai']
+  },
+  'hawaii-us': {
+    stopIds: ['maui-hi', 'honolulu-hi'],
+    title: 'Hawaii',
+    dateRange: '—',
+    summary: 'Maui and Oʻahu — volcanoes, road trips, and city-beach mix.',
+    highlights: ['Maui', 'Honolulu / Oʻahu']
+  },
+  'paris-fr': {
+    stopIds: ['paris-fr'],
+    title: 'Paris, France',
+    dateRange: 'Multiple visits',
+    summary:
+      'Art, cafés, and wandering the arrondissements. The Louvre and Montmartre never get old.',
+    highlights: ['Sunset along the Seine', 'Day trips by rail to nearby towns']
+  },
+  'amsterdam-nl': {
+    stopIds: ['amsterdam-nl'],
+    title: 'Amsterdam, Netherlands',
+    dateRange: '—',
+    summary:
+      'Canals, bikes, and museums. Easy city to explore on foot with great food along the way.',
+    highlights: ['Canal ring walks', 'Dutch design and markets']
+  },
+  'london-gb': {
+    stopIds: ['london-gb'],
+    title: 'London, England',
+    dateRange: '—',
+    summary:
+      'Museums, neighborhoods, and Thames-side walks — classic pubs and easy day trips out of the city.',
+    highlights: null
+  },
+  'doha-qa': {
+    stopIds: ['doha-qa'],
+    title: 'Doha, Qatar',
+    dateRange: '—',
+    summary: 'Gulf skyline, Corniche waterfront, and desert-meets-city contrast.',
+    highlights: null
+  },
+  'northern-california-ca': {
+    stopIds: ['sanfrancisco-ca', 'napa-ca', 'sonoma-ca', 'laketahoe-ca'],
+    title: 'Northern California',
+    dateRange: '—',
+    summary:
+      'City, fog, and neighborhoods in San Francisco — wine country and the Sierra at Tahoe within reach.',
+    highlights: ['Bay views and neighborhoods', 'Napa / Sonoma', 'Lake Tahoe']
+  },
+  'philadelphia-pa': {
+    stopIds: ['philadelphia-pa'],
+    title: 'Philadelphia, PA',
+    dateRange: '—',
+    summary:
+      'History around every corner — Independence Hall, museums, and classic East Coast city energy.',
+    highlights: ['Historic district', 'Museum row']
+  },
+  'chicago-il': {
+    stopIds: ['chicago-il'],
+    title: 'Chicago, IL',
+    dateRange: '—',
+    summary:
+      'Architecture river tours, deep-dish debate, and lakefront miles in summer.',
+    highlights: ['Skyline views', 'Neighborhood food']
+  }
+};
+
+const stopToTripId = new Map(
+  Object.entries(TRIPS).flatMap(([tripId, trip]) => trip.stopIds.map((sid) => [sid, tripId]))
+);
+
 function buildWorldPlaces() {
   return WORLD_ONLY.map(([id, lat, lng, title, iso2]) => ({
     id,
@@ -146,7 +321,7 @@ function buildWorldPlaces() {
     lng,
     title,
     countryCode: iso2,
-    tripId: id,
+    tripId: stopToTripId.get(id) ?? id,
     worldMap: true,
     usMap: false
   }));
@@ -159,7 +334,7 @@ function buildUsPlaces() {
     lng,
     title,
     countryCode: 'US',
-    tripId: id,
+    tripId: stopToTripId.get(id) ?? id,
     worldMap: id === 'philadelphia-pa',
     usMap: true
   }));
@@ -228,92 +403,34 @@ export const visitedIndianStateNames = new Set([
   'Maharashtra'
 ]);
 
-/** Richer copy for selected stops; others use getTrip fallback */
-const tripsById = {
-  'paris-fr': {
-    title: 'Paris, France',
-    dateRange: 'Multiple visits',
-    summary:
-      'Art, cafés, and wandering the arrondissements. The Louvre and Montmartre never get old.',
-    highlights: [
-      'Sunset along the Seine',
-      'Day trips by rail to nearby towns'
-    ]
-  },
-  'amsterdam-nl': {
-    title: 'Amsterdam, Netherlands',
-    dateRange: '—',
-    summary:
-      'Canals, bikes, and museums. Easy city to explore on foot with great food along the way.',
-    highlights: ['Canal ring walks', 'Dutch design and markets']
-  },
-  'ghent-be': {
-    title: 'Ghent, Belgium',
-    dateRange: '—',
-    summary:
-      'Canals, guildhalls, and a compact center — great on foot with strong food and beer culture.',
-    highlights: ['Graslei / Korenlei', 'Medieval core']
-  },
-  'bruges-be': {
-    title: 'Bruges, Belgium',
-    dateRange: '—',
-    summary:
-      'Storybook canals and cobblestones — chocolate shops, bell towers, and slow strolls.',
-    highlights: ['Historic center', 'Canals']
-  },
-  'antwerp-be': {
-    title: 'Antwerp, Belgium',
-    dateRange: '—',
-    summary:
-      'Port city energy with fashion, art, and diamonds — big squares and lively cafés.',
-    highlights: ['Cathedral area', 'Old town']
-  },
-  'mont-tremblant-ca': {
-    title: 'Mont-Tremblant, Quebec',
-    dateRange: '—',
-    summary:
-      'Mountain town energy in every season — skiing in winter and hiking when the trails open up.',
-    highlights: ['Laurentian scenery', 'Village strolls']
-  },
-  'sanjuan-pr': {
-    title: 'San Juan, Puerto Rico',
-    dateRange: '—',
-    summary:
-      'Old San Juan’s forts and colors, plus beaches nearby. Great mix of history and coast.',
-    highlights: ['El Morro', 'Local food scene']
-  },
-  'philadelphia-pa': {
-    title: 'Philadelphia, PA',
-    dateRange: '—',
-    summary:
-      'History around every corner — Independence Hall, museums, and classic East Coast city energy.',
-    highlights: ['Historic district', 'Museum row']
-  },
-  'chicago-il': {
-    title: 'Chicago, IL',
-    dateRange: '—',
-    summary:
-      'Architecture river tours, deep-dish debate, and lakefront miles in summer.',
-    highlights: ['Skyline views', 'Neighborhood food']
-  },
-  'sanfrancisco-ca': {
-    title: 'San Francisco, CA',
-    dateRange: '—',
-    summary:
-      'City, fog, and neighborhoods — bridges, food, and easy day trips around the Bay.',
-    highlights: ['Bay views', 'Neighborhood walks']
-  }
-};
+/** Stop ids belonging to a trip. */
+export function getStopIdsForTrip(tripId) {
+  const t = TRIPS[tripId];
+  if (t) return [...t.stopIds];
+  return [tripId];
+}
 
 export function getTrip(place) {
-  const custom = tripsById[place.tripId];
-  if (custom) {
-    return { ...custom };
+  const tripId = place.tripId;
+  const trip = TRIPS[tripId];
+  if (trip) {
+    const { stopIds, photoIds = [], ...detail } = trip;
+    return {
+      ...detail,
+      tripId,
+      photoIds: Array.isArray(photoIds) ? photoIds : [],
+      selectedStopTitle: place.title,
+      stopsOnTrip: stopIds.length
+    };
   }
   return {
+    tripId,
     title: place.title,
     dateRange: null,
     summary: `Notes from ${place.title}: add your favorite moments, restaurants, and photos here.`,
-    highlights: null
+    highlights: null,
+    photoIds: [],
+    selectedStopTitle: place.title,
+    stopsOnTrip: 1
   };
 }

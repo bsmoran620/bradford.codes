@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import { MyTravelMap } from './MyTravelMap';
+import { TravelPhotoGallery } from './TravelPhotoGallery';
 import { getTrip } from '../data/travelData';
 
 export function MyTravel() {
@@ -12,6 +13,9 @@ export function MyTravel() {
     return (
       <Fragment>
         <h3>{trip.title}</h3>
+        {trip.stopsOnTrip > 1 ? (
+          <p className="my-travel-selected-pin">Pin: {trip.selectedStopTitle}</p>
+        ) : null}
         {trip.dateRange ? (
           <p className="my-travel-trip-dates">{trip.dateRange}</p>
         ) : null}
@@ -23,6 +27,12 @@ export function MyTravel() {
             ))}
           </ul>
         ) : null}
+        <TravelPhotoGallery
+          key={trip.tripId}
+          tripId={trip.tripId}
+          tripTitle={trip.title}
+          photoIds={trip.photoIds}
+        />
       </Fragment>
     );
   }
