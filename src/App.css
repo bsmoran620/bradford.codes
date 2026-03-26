@@ -92,12 +92,106 @@
   text-align: center;
   height: 85vh;
   overflow-y: scroll;
+  overflow-x: hidden; /* prevents horizontal/trackpad side-scrolling from affecting the page */
 }
 
 .my-travel-map {
   height: 75vh;
-  width: 100vw;
-  cursor: pointer;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.my-travel-map-shell {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.my-travel-map-toolbar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.my-travel-map-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(52, 58, 64, 0.92);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.my-travel-back-btn {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.my-travel-leaflet {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0 2px 12px rgba(15, 60, 90, 0.12);
+  /* Avoid overflow:hidden here — it clips tile panes and often shows hairline seams. */
+  max-width: 100%;
+}
+
+/* Matches Voyager ocean while tiles load; avoids gray flash */
+.my-travel-leaflet .leaflet-container {
+  font-family: inherit;
+  background: #b8d9ea;
+  border-radius: 8px;
+}
+
+/* Reduce 1px gaps between raster tiles (common WebKit/Firefox subpixel issue). */
+.my-travel-leaflet .leaflet-tile {
+  border: 0 !important;
+  outline: none;
+}
+
+.my-travel-leaflet .leaflet-control-attribution {
+  font-size: 10px;
+  max-width: 55%;
+  white-space: normal;
+  line-height: 1.2;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 4px 0 0 0;
+}
+
+.travel-map-pin .travel-map-pin-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travel-map-pin-head {
+  width: 10px;
+  height: 10px;
+  background: #e02020;
+  border-radius: 50%;
+  border: 1px solid #1a1a1a;
+}
+
+.travel-map-pin-stem {
+  width: 2px;
+  height: 12px;
+  background: #1a1a1a;
+}
+
+.my-travel-trip-dates {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-travel-highlights {
+  text-align: left;
+  display: inline-block;
+  margin-top: 0.75rem;
 }
 
 .my-travel-details {

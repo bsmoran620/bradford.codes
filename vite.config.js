@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react({ include: /\.(js|jsx|ts|tsx)$/ }), svgr()],
   esbuild: {
     loader: 'jsx',
-    include: /src\/.*\.js$/,
+    include: /src\/.*\.(js|jsx)$/,
     exclude: []
   },
   optimizeDeps: {
