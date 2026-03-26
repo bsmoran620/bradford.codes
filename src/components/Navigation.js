@@ -1,28 +1,48 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export function Navigation(props) {
+const links = [
+  { to: '/resume', label: 'Resume' },
+  { to: '/projects/my-travel', label: 'MyTravel' },
+  { to: '/projects/2', label: 'Trip Planner' }
+];
+
+export function Navigation() {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
   return (
-    <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
-      <Navbar.Brand as={Link} to="/">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+      <Link className="navbar-brand" to="/">
         Brad Moran
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      {/* timeout={0}: skip height transition — iOS Safari often blanks the view with .collapsing */}
-      <Navbar.Collapse id="basic-navbar-nav" timeout={0}>
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/resume">
-            Resume
-          </Nav.Link>
-          <Nav.Link as={Link} to="/projects/my-travel">
-            MyTravel
-          </Nav.Link>
-          <Nav.Link as={Link} to="/projects/2">
-            Trip Planner
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      </Link>
+      <button
+        type="button"
+        className="navbar-toggler"
+        aria-controls="main-nav-links"
+        aria-expanded={open}
+        aria-label="Toggle navigation"
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+      {/* Plain Bootstrap collapse + .show — avoids react-bootstrap Collapse / react-transition-group (problematic on iOS Safari). */}
+      <div
+        className={`navbar-collapse collapse${open ? ' show' : ''}`}
+        id="main-nav-links"
+      >
+        <div className="navbar-nav mr-auto">
+          {links.map(({ to, label }) => (
+            <Link key={to} className="nav-link" to={to}>
+              {label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 }
