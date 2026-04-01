@@ -10,10 +10,7 @@ export function TravelPhotoGallery({ tripId, tripTitle, photoIds }) {
   );
 
   const files = useMemo(() => {
-    const list = Array.isArray(photoIds) ? photoIds : [];
-    return [...list].sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-    );
+    return Array.isArray(photoIds) ? [...photoIds] : [];
   }, [photoIds]);
 
   const [activeIndex, setActiveIndex] = useState(0);

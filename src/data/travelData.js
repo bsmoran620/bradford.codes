@@ -69,6 +69,7 @@ const US_STOPS = [
   ['lasvegas-nv', 36.1699, -115.1398, 'Las Vegas NV'],
   ['flagstaff-az', 35.1983, -111.6513, 'Flagstaff AZ'],
   ['phoenix-az', 33.4484, -112.074, 'Phoenix AZ'],
+  ['scottsdale-az', 33.4942, -111.9261, 'Scottsdale, AZ'],
   ['sanfrancisco-ca', 37.7749, -122.4194, 'San Francisco, CA'],
   ['napa-ca', 38.2975, -122.2869, 'Napa, CA'],
   ['sonoma-ca', 38.2919, -122.458, 'Sonoma, CA'],
@@ -132,9 +133,9 @@ const US_STOPS = [
   ['louisville-ky', 38.25424, -85.75941, 'Louisville, KY'],
   ['cincinnati-oh', 39.1031182, -84.5120196, 'Cincinnati, OH'],
   ['columbus-oh', 39.96118, -82.99879, 'Columbus, OH'],
-  ['traversacity-mi', 44.76306, -85.62063, 'Traverse City, MI'],
   ['mackinawcity-mi', 45.7778, -84.7266, 'Mackinaw City, MI'],
   ['crossvillage-mi', 45.6422, -85.0375, 'Cross Village, MI'],
+  ['pellston-mi', 45.5728, -84.7865, 'Pellston, MI'],
   ['sedona-az', 34.8697, -111.7611, 'Sedona, AZ'],
   ['tucson-az', 32.22174, -110.92648, 'Tucson, AZ'],
   ['havasupai-az', 36.2344, -112.6865, 'Havasupai, AZ']
@@ -145,7 +146,48 @@ const US_STOPS = [
  * S3 / CloudFront: images at {tripId}/{filename}. Optional `photoIds` lists filenames for the gallery.
  */
 const TRIPS = {
-  'belgium-be': {
+  'boston-2014': {
+    stopIds: ['boston-ma', 'nyc-ny'],
+    title: 'Boston 2014',
+    dateRange: 'June 2014',
+    summary: 'Boston Hackathon for work',
+    highlights: ['Katz Deli - NYC', 'Beacon Hill - Boston', 'Cheers Bar - Boston']
+  },
+  'arizona-2015': {
+    stopIds: ['sedona-az', 'flagstaff-az', 'scottsdale-az', 'phoenix-az', 'tucson-az'],
+    title: 'Arizona 2015',
+    dateRange: 'August 2015',
+    summary: 'Arizona road trip to Flagstaff, Sedona, Scottsdale, Phoenix, and Tucson to visit my brother',
+    highlights: ['Sedona Jeep Tour', 'Boulder Golf & Spa Scottsdale Resort', 'Taliesin West - Frank Lloyd Wright'],
+    photoIds: [
+      'az-boulders.JPG',
+      'az-sedona-jeep.JPG',
+      'az-sedona1.JPG',
+      'az-sedona2.JPG',
+      'az-sedona3.JPG',
+      'az-sedona4.JPG',
+      'az-taliest-west.JPG'
+    ]
+  },
+  'utah-2016': {
+    stopIds: ['saltlakecity-ut', 'parkcity-ut'],
+    title: 'Utah 2016',
+    dateRange: 'August 2016',
+    summary: 'Work trip to Salt Lake City conference and Mountain Bike',
+    highlights: ['Mountain Bike Park City'],
+    photoIds: [
+      'ut-bike.JPG'
+    ]
+  },
+
+
+
+
+
+
+
+
+  'europe-2020': {
     stopIds: ['ghent-be', 'bruges-be', 'antwerp-be'],
     title: 'Belgium',
     dateRange: '—',
@@ -238,7 +280,21 @@ const TRIPS = {
       'bengaluru-temple.jpeg',
       'bengaluru-farm.jpeg',
       'bengaluru-mansion.jpeg',
+      'bengaluru_castle.jpeg',
       'dosa.jpeg',
+      'mysuru_elephants.jpeg',
+      'mysuru_market.jpeg',
+      'coorg_waterfall.jpeg',
+      'coorg_jeeps.jpeg',
+      'toddy_stall.jpeg',
+      'temple_shiva.jpeg',
+      'temple_beach.jpeg',
+      'goa_beach.jpeg',
+      'hotel_mumbai.jpeg',
+      'mumbai_hilton.jpeg',
+      'mumbai_monkeys.jpeg',
+      'mumbai_street.jpeg'
+
     ],
     title: 'India 2025',
     dateRange: 'September 2025',
