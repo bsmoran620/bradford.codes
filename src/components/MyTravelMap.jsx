@@ -23,11 +23,17 @@ import {
   visitedIndianStateNames
 } from '../data/travelData';
 
-/** Light blue water, soft land; no labels (keeps the map calm). */
-const CARTO_VOYAGER_NOLABELS =
-  'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png';
+/**
+ * Light blue water, soft land; no labels (keeps the map calm).
+ * CARTO requires an API key on raster tiles; it is domain-restricted and not a secret,
+ * but kept in env (VITE_CARTO_API_KEY) so it stays out of the repo and can be rotated.
+ */
+const CARTO_API_KEY = import.meta.env.VITE_CARTO_API_KEY || '';
+const CARTO_VOYAGER_NOLABELS = `https://basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png${
+  CARTO_API_KEY ? `?key=${encodeURIComponent(CARTO_API_KEY)}` : ''
+}`;
 const CARTO_ATTRIBUTION =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>';
+  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution/">CARTO</a>';
 
 const US_BOUNDS = [
   [24.2, -126.5],
