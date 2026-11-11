@@ -950,3 +950,50 @@ export function getTrip(place, activeTripId) {
     stopsOnTrip: 1
   };
 }
+
+const MONTHS = [
+  'january',
+  'february',
+  'march',
+  'april',
+  'may',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december'
+];
+
+/** Sortable yyyymm from a dateRange like 'September 2026' or '2017' (last year/month wins); null if undated. */
+function dateRangeSortKey(dateRange) {
+  const years = (dateRange ?? '').match(/\b(19|20)\d{2}\b/g);
+  if (!years) return null;
+  const months = dateRange.toLowerCase().match(new RegExp(`\\b(${MONTHS.join('|')})\\b`, 'g'));
+  const month = months ? MONTHS.indexOf(months[months.length - 1]) + 1 : 0;
+  return Number(years[years.length - 1]) * 100 + month;
+}
+
+/** Most recent dated trip that has photos (for the home page), or null. */
+export function getRecentTripWithPhotos() {
+  let best = null;
+  for (const [tripId, trip] of Object.entries(TRIPS)) {
+    if (!Array.isArray(trip.photoIds) || trip.photoIds.length === 0) continue;
+    const key = dateRangeSortKey(trip.dateRange);
+    if (key == null || (best && key <= best.key)) continue;
+    best = { key, tripId, trip };
+  }
+  if (!best) return null;
+  const { title, dateRange, summary, photoIds } = best.trip;
+  return { tripId: best.tripId, title, dateRange, summary, photoIds };
+}
+
+/** Headline numbers for the home page travel card. */
+export function getTravelStats() {
+  return {
+    trips: Object.keys(TRIPS).length,
+    countries: visitedCountryNames.size,
+    places: places.length
+  };
+}

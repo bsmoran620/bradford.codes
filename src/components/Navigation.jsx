@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router';
 
 const links = [
   { to: '/resume', label: 'Resume' },
-  { to: '/projects/my-travel', label: 'MyTravel' },
-  { to: '/projects/2', label: 'Trip Planner' }
+  { to: '/projects/my-travel', label: 'MyTravel' }
 ];
 
 export function Navigation() {
