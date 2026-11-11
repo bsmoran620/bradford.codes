@@ -1,7 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import Card from "react-bootstrap/Card";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Accordion from "react-bootstrap/Accordion";
+import Collapse from "react-bootstrap/Collapse";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 
@@ -13,19 +12,20 @@ export function ProjectList(props) {
 
     return (
         <Fragment>
-            <Accordion defaultActiveKey="0">
-                <Jumbotron fluid>
-                    <h2>Unique Experiences</h2>
-                    <Accordion.Collapse eventKey="0">
+            {/* Bootstrap 5 dropped .jumbotron; utilities recreate its background and vertical padding */}
+            <div className="jumbotron bg-body-secondary py-5 mb-4">
+                <h2>Unique Experiences</h2>
+                <Collapse in={!isCollapsed}>
+                    <div>
                         <ul>
                             {props.uniqueExperiences.map((uniqueExperience, index) => uniqueExperienceComponent(uniqueExperience, index))}
                         </ul>
-                    </Accordion.Collapse>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0" onClick={toggleIsCollapsed}>
-                        {isCollapsed ? 'See More' : 'See Less'}
-                    </Accordion.Toggle>
-                </Jumbotron>
-            </Accordion>
+                    </div>
+                </Collapse>
+                <Button variant="link" onClick={toggleIsCollapsed}>
+                    {isCollapsed ? 'See More' : 'See Less'}
+                </Button>
+            </div>
             <div className="project-container">
                 {props.projects
                     .filter(project => {
@@ -56,8 +56,10 @@ function projectCardComponent(project, index, colorLookup) {
             <div>
                 {project.skills.map(skill => {
                     const colorFound = colorLookup.find(test => test.id === skill);
+                    // bg={null}: the default bg-primary class is !important and would override the skill color
                     return <Badge
-                        variant="primary"
+                        key={skill}
+                        bg={null}
                         style={{backgroundColor: `${colorFound === undefined ? '#ffaabb' : colorFound.color}`}}
                     >{skill}</Badge>
                 })}
