@@ -32,6 +32,8 @@ const WORLD_ONLY = [
   ['punta-cana-dr', 18.5601, -68.3725, 'Punta Cana, Dominican Republic', 'DO'],
   ['la-romana-dr', 18.4273, -68.965, 'La Romana, Dominican Republic', 'DO'],
   ['miches-dr', 18.9836, -69.0466, 'Miches, Dominican Republic', 'DO'],
+  ['caye-caulker-bz', 17.742, -88.024, 'Caye Caulker, Belize', 'BZ'],
+  ['ambergris-caye-bz', 17.9214, -87.9611, 'Ambergris Caye (San Pedro), Belize', 'BZ'],
   ['bengaluru-in', 12.9716, 77.5946, 'Bengaluru, India', 'IN'],
   ['goa-in', 15.4909, 73.8278, 'Goa, India', 'IN'],
   ['mumbai-in', 19.076, 72.8777, 'Mumbai, India', 'IN'],
@@ -141,7 +143,11 @@ const US_STOPS = [
   ['petoskey-mi', 45.3206, -84.9514, 'Petoskey, MI'],
   ['sedona-az', 34.8697, -111.7611, 'Sedona, AZ'],
   ['tucson-az', 32.22174, -110.92648, 'Tucson, AZ'],
-  ['havasupai-az', 36.2344, -112.6865, 'Havasupai, AZ']
+  ['havasupai-az', 36.2344, -112.6865, 'Havasupai, AZ'],
+  ['dallas-tx', 32.7767, -96.797, 'Dallas, TX'],
+  ['fortworth-tx', 32.7555, -97.3308, 'Fort Worth, TX'],
+  ['waco-tx', 31.5493, -97.1467, 'Waco, TX'],
+  ['deweybeach-de', 38.6926, -75.0749, 'Dewey Beach, DE']
 ];
 
 /**
@@ -628,6 +634,14 @@ const TRIPS = {
       'punta-cana.jpeg'
     ]
   },
+  'buffalo-2025': {
+    stopIds: ['buffalo-ny'],
+    title: 'Buffalo 2025',
+    dateRange: 'December 2025',
+    summary: 'Trip to Buffalo, New York',
+    photoIds: [
+    ]
+  },
   'mont-tremblant-2026': {
     stopIds: ['mont-tremblant-ca', 'montreal-ca'],
     title: 'Mont Tremblant 2026',
@@ -660,6 +674,38 @@ const TRIPS = {
     dateRange: 'March 2026',
     summary: 'Ski Trip to Vermont',
     highlights: ['Burlington', 'Jay Peak Waterpark'],
+  },
+  'belize-2026': {
+    stopIds: ['caye-caulker-bz', 'ambergris-caye-bz'],
+    title: 'Belize 2026',
+    dateRange: 'April 2026',
+    summary: 'Island trip to Belize visiting Caye Caulker and Ambergris Caye',
+    photoIds: [
+    ]
+  },
+  'texas-2026': {
+    stopIds: ['dallas-tx', 'fortworth-tx', 'waco-tx'],
+    title: 'Texas 2026',
+    dateRange: 'May 2026',
+    summary: 'Texas trip to Dallas, Fort Worth, and Waco',
+    photoIds: [
+    ]
+  },
+  'dewey-beach-2026': {
+    stopIds: ['deweybeach-de'],
+    title: 'Dewey Beach 2026',
+    dateRange: 'July 2026',
+    summary: 'Beach trip to Dewey Beach, Delaware',
+    photoIds: [
+    ]
+  },
+  'san-diego-2026': {
+    stopIds: ['sandiego-ca'],
+    title: 'San Diego 2026',
+    dateRange: 'September 2026',
+    summary: 'Trip to San Diego, California',
+    photoIds: [
+    ]
   },
 
 
@@ -806,6 +852,7 @@ export const visitedCountryNames = new Set([
   'Peru',
   // world-atlas uses "Dominican Rep."
   'Dominican Rep.',
+  'Belize',
   'India',
   'Qatar',
   'United Kingdom'

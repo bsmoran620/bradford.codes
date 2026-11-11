@@ -146,7 +146,8 @@ export function MyTravelMap({
             p.countryCode === 'CR' ||
             p.countryCode === 'PE' ||
             p.countryCode === 'DO' ||
-            p.countryCode === 'PR')
+            p.countryCode === 'PR' ||
+            p.countryCode === 'BZ')
       ),
     []
   );
@@ -254,7 +255,8 @@ export function MyTravelMap({
                     place.countryCode === 'CR' ||
                     place.countryCode === 'PE' ||
                     place.countryCode === 'DO' ||
-                    place.countryCode === 'PR'
+                    place.countryCode === 'PR' ||
+                    place.countryCode === 'BZ'
                   ) {
                     onEnterAmericas();
                     onSelectPlace(place);
